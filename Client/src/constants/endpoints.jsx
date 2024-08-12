@@ -1,0 +1,1 @@
+export const API_LEAD_SUBMIT= 'http://localhost:4000/createLead';
