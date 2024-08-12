@@ -6,13 +6,19 @@ const app = express();
 
 const { dbConnect, mongoose } = require('./DB/dbConnect');
 
-//ports
+//host / port
 const PORT = process.env.PORT || 4000; 
 const HOST = process.env.HOST || '127.0.0.1';
+
+//routes
+const leadRoutes = require('./controllers/leadEndpoints');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+//use routes
+app.use(leadRoutes);
 
 //connect to db, if no errors then execute app.listen
 //this makes sure there are no issues with the db connection before starting the app to listen for incoming requests. 
