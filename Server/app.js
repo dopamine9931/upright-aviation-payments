@@ -12,7 +12,16 @@ const HOST = process.env.HOST || '127.0.0.1';
 
 //routes
 const leadRoutes = require('./controllers/leadEndpoints');
+const apiKeyRoute = require('./controllers/apiKeyEndpoints')
 
+//limit requests 
+const apiLimiter = require('./middlewares/apiLimiter')
+
+//limit how many requests come from an ip address in 15 minutes
+app.use(apiLimiter);
+
+//limit packet size to 1MB
+app.use(express.json({ limit: '1mb' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
