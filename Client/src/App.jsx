@@ -1,5 +1,10 @@
-import React from "react" 
-import {   createBrowserRouter, createRoutesFromElements, Routes, Route } from "react-router-dom";
+import React from "react";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Home from "./pages/homepage.jsx";
 import AboutUs from "./pages/aboutus.jsx";
 import LeadCapture from "./components/leadCapture";
@@ -8,7 +13,6 @@ import LeadCapture from "./components/leadCapture";
 
 function App() {
   return (
-    
     <>
       <Routes>
         <Route path="/" element={<Home />} />
