@@ -17,7 +17,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/herchantservices" element={<MerchantServices />} />
+        <Route path="/merchantservices" element={<MerchantServices />} />
         <Route path="/gateway" element={<GatewayConnectivity />} />
         <Route path="/fuelcard" element={<FuelCardSolutions />} />
         <Route path="/atmsolutions" element={<ATMSolutions />} />
