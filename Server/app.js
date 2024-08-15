@@ -12,6 +12,7 @@ const HOST = process.env.HOST || '127.0.0.1';
 
 //routes
 const leadRoutes = require('./controllers/leadEndpoints');
+const adminRoutes = require('./controllers/adminEndpoints');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -19,6 +20,7 @@ app.use(cors());
 
 //use routes
 app.use(leadRoutes);
+app.use("/auth", adminRoutes);
 
 //connect to db, if no errors then execute app.listen
 //this makes sure there are no issues with the db connection before starting the app to listen for incoming requests. 

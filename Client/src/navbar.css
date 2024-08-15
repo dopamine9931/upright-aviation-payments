@@ -1,0 +1,12 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+padding: 20px ;
+color: black ;
+background-color: white; 
+position: fixed; /* navbar is in fixed position when you scroll */
+top: 0; /* navbar is at the very top of page */
+width: 100%; /* navbar takes up the full width of the page */
+z-index: 1000; /* navbar is on top of other elements */
+}
