@@ -11,7 +11,7 @@ const JWT_KEY = process.env.JWT_KEY;
 router.post("/signup", async (req, res) => {
   try {
     // Extracting variables off the req
-    const { firstName, email, password } = req.body;
+    const { firstName, email, password, admin = false } = req.body;
 
     // Validation code to ensure it has all data
     if (!firstName || !email || !password) {
@@ -20,7 +20,7 @@ router.post("/signup", async (req, res) => {
 
     // Encrypting password
     const hashedPassword = bcrypt.hashSync(password, SALT);
-    const userObj = { firstName, email, password: hashedPassword };
+    const userObj = { firstName, email, password: hashedPassword, admin };
 
     // Saving user off
     const newUser = new User(userObj);
@@ -52,6 +52,7 @@ router.post("/login", async (req, res) => {
       throw new Error("Please provide an email and password");
     }
 
+    // Find the user by email
     const foundUser = await User.findOne({ email });
     if (!foundUser) {
       throw new Error("User doesn't exist");
@@ -71,10 +72,42 @@ router.post("/login", async (req, res) => {
     // Creating a token for logging in locally for the user
     const token = getToken(foundUser);
 
-    // Sending success response with token
+    // Sending success response with token and admin status
     res.status(200).json({
       message: "User logged in",
       token,
+      isAdmin: foundUser.admin, // Include the admin status in the response
+    });
+  } catch (err) {
+    console.log(err);
+    // Sending error response with error message
+    res.status(500).json({
+      message: err.message, // Include error message in response
+    });
+  }
+});
+
+// Route to delete a user by email
+router.delete("/delete", async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    // Ensure the email is provided
+    if (!email) {
+      throw new Error("Please provide an email");
+    }
+
+    // Find and delete the user by email
+    const deletedUser = await User.findOneAndDelete({ email });
+
+    if (!deletedUser) {
+      throw new Error("User not found");
+    }
+
+    // Sending success response
+    res.status(200).json({
+      message: "User deleted successfully",
+      email: deletedUser.email,
     });
   } catch (err) {
     console.log(err);
