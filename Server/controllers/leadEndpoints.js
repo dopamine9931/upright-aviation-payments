@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const leadForm = require('../models/leadForm');
+const apiKeyAuth = require('../middlewares/apiKey');
 
 //*Create lead
-router.post('/api/createLead', async (req,res) => {
+router.post('/api/createLead',apiKeyAuth, async (req,res) => {
     try{
         const { firstName, lastName, company, title, email, phone, extensiion, product } = req.body;
         const leadFormObj = { firstName, lastName, company, title, email, phone, extensiion, product };

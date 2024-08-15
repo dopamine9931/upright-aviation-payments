@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //use routes
-app.use(leadRoutes);
+app.use(leadRoutes, apiKeyRoute);
 app.use("/auth", adminRoutes);
 
 //connect to db, if no errors then execute app.listen
