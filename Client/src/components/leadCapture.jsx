@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form, Input, Button, Modal } from 'antd';
 import { useForm } from 'antd/es/form/Form';
 import { API_LEAD_SUBMIT } from '../constants/endpoints';
+import { ApiKeyContext } from '../context/apiKeyContext';
 
 //take in isModal prop to determine how to show the form. 
 const LeadCapture = ({ isModal }) => {
@@ -12,6 +13,8 @@ const LeadCapture = ({ isModal }) => {
     //state for if the modal is open or not.
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    //apikey context
+    const apiKey = useContext(ApiKeyContext);
     //functions for setting modal open state 
     const showModal = () => setIsModalOpen(true);
     const handleCancel = () => setIsModalOpen(false);
@@ -28,6 +31,7 @@ const LeadCapture = ({ isModal }) => {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
+                    'x-api-key': `${apiKey}`,
                 },
                 //instead of capturing each value, antd form submits values
                 body: JSON.stringify(values),
