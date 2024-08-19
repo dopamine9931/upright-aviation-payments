@@ -14,7 +14,7 @@ import ContactUs from "./pages/constactus.jsx";
 import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
 import Homepage from "./pages/homepage.jsx";
 
-// import './App.css'
+import './App.css'
 
 function App() {
   return (
