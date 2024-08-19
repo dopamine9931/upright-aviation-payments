@@ -13,7 +13,6 @@ import LeadCapture from "./components/leadCapture";
 
 function App() {
   return (
-
     <>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,7 +39,5 @@ function App() {
     </>
   );
 }
-
-
 
 export default App;
