@@ -11,6 +11,7 @@ import LeadCapture from "./components/leadCapture";
 
 // import './App.css'
 
+
 function App() {
   return (
     <>
