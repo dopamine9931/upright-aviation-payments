@@ -15,7 +15,7 @@ export const ApiKeyProvider = ({ children }) => {
                 }
                 const data = await response.json();
                 setApiKey(data.APIKEY)
-                console.log(apiKey);
+                // console.log(apiKey);
             } catch (err){
                 console.error('Error fetching API key:', err);
             }

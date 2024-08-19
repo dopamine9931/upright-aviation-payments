@@ -1,43 +1,38 @@
 import React from "react";
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
+  BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import Home from "./pages/homepage.jsx";
 import AboutUs from "./pages/aboutus.jsx";
-import LeadCapture from "./components/leadCapture";
+import MerchantServices from "./pages/merchantservices.jsx";
+import Gateway from "./pages/gateway.jsx";
+import FuelCardSolutions from "./pages/fuelcard.jsx";
+import ATMSolutions from "./pages/atmsolutions.jsx";
+import ACHSolutions from "./pages/achsolutions.jsx";
+import ContactUs from "./pages/constactus.jsx";
+import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
+import Homepage from "./pages/homepage.jsx";
 
-// import './App.css'
+import './App.css'
 
 
 function App() {
   return (
-    <>
+  <ApiKeyProvider>
+    <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/herchantservices" element={<MerchantServices />} />
-        <Route path="/gateway" element={<GatewayConnectivity />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/merchantservices" element={<MerchantServices />} />
+        <Route path="/gateway" element={<Gateway />} />
         <Route path="/fuelcard" element={<FuelCardSolutions />} />
         <Route path="/atmsolutions" element={<ATMSolutions />} />
         <Route path="/achsolutions" element={<ACHSolutions />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-
-      <>
-        {/* example of how to use lead capture button or form on a page. this will be removed. import LeadCapture is needed on page */}
-        <div style={{ padding: "20px" }}>
-          {/* LeadCapture component used as a modal example */}
-          <LeadCapture isModal={true} />
-
-          {/* LeadCapture component used directly on the page example */}
-          <LeadCapture isModal={false} />
-        </div>
-        {/* end of lead capture form / button example. */}
-      </>
-    </>
+  </Router>
+</ApiKeyProvider>
   );
 }
 

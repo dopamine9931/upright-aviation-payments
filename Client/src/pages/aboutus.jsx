@@ -1,4 +1,4 @@
-import React, { Routes, Route } from "react-router-dom";
+import React, { Routes, Route } from "react";
 // import React from "react";
 import { Card } from "antd";
 
@@ -22,7 +22,7 @@ function AboutUs () {
             />
           }
         >
-          <Meta title="Europe Street beat" description="www.instagram.com" />
+          {/* <Meta title="Europe Street beat" description="www.instagram.com" /> */}
         </Card>
       </div>
 
