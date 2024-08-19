@@ -122,8 +122,8 @@ const LandingPage = () => {
 
         <section id="about" className="about">
           <h2>About Us</h2>
-          <p>Aviation Payments is about introducing and promoting a fintech company that specializes in financial 
-            technology solutions tailored for the aviation industry. The goal of the project is to revolutionize fintech for 
+          <p>Aviation Payments is about introducing and promoting a Fintech company that specializes in financial 
+            technology solutions tailored for the aviation industry. The goal of the project is to revolutionize Fintech for 
             aviation by providing cutting-edge services that streamline and enhance financial transactions. </p>
         </section>
 
