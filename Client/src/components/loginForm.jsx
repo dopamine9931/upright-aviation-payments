@@ -2,29 +2,18 @@ import React, { useState } from "react";
 import { API_USER_CONTROL } from "../constants/endpoints";
 import { Form, Input, Button } from "antd";
 
-
-const Login = ({ onTokenUpdate }) => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+const LoginForm = ({ onTokenUpdate, onAdminStatusUpdate }) => {
   const [error, setError] = useState("");
 
-//wasnt sure if I still need the handleChange, left it in case it is needed and i just need more info on the ui
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // handles the token
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // Handles the token and admin status
+  const handleSubmit = async (values) => {
     try {
       const response = await fetch(`${API_USER_CONTROL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(values),
       });
 
       if (!response.ok) {
@@ -34,6 +23,7 @@ const Login = ({ onTokenUpdate }) => {
 
       const data = await response.json();
       onTokenUpdate(data.token);
+      onAdminStatusUpdate(data.isAdmin); // Update admin status in the frontend
       setError("");
     } catch (error) {
       setError(error.message);
@@ -41,28 +31,31 @@ const Login = ({ onTokenUpdate }) => {
   };
 
   return (
-    <Form form={form} layout="vertical" onFinish={handleSubmit}>
-      <Form.Item
-        name="email"
-        label="email"
-        rules={[{ required: true, message: "Please input your email!" }]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        name="password"
-        label="password"
-        rules={[{ required: true, message: "Please input your password!" }]}
-      >
-        <Input.Password />
-      </Form.Item>
-      <Form.Item>
-        <Button type="primary" htmlType="submit">
-          Login
-        </Button>
-      </Form.Item>
-    </Form>
+    <>
+      <Form layout="vertical" onFinish={handleSubmit}>
+        <Form.Item
+          name="email"
+          label="Email"
+          rules={[{ required: true, message: "Please input your email!" }]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name="password"
+          label="Password"
+          rules={[{ required: true, message: "Please input your password!" }]}
+        >
+          <Input.Password />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Login
+          </Button>
+        </Form.Item>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+      </Form>
+    </>
   );
 };
 
-export default Login;
+export default LoginForm;
