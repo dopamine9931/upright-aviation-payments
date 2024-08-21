@@ -1,0 +1,27 @@
+.custom-modal {
+  background-color: #141414 !important;
+  color: #f3f3f3 !important;
+}
+
+.custom-modal .ant-modal-content {
+  background-color: #141414 !important;
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+.custom-modal .ant-modal-header {
+  background-color: #141414 !important;
+  color: #f3f3f3 !important;
+}
+
+.custom-modal .ant-modal-title {
+  color: #f3f3f3 !important;
+}
+
+.custom-modal .ant-modal-body {
+  background-color: #141414 !important;
+  color: #f3f3f3 !important;
+}
+
+.custom-modal .ant-modal-footer {
+  background-color: #141414 !important;
+}

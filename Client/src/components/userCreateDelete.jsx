@@ -1,5 +1,7 @@
 import React from "react";
-import { Form, Input, Button, Collapse, message } from "antd";
+import { Form, Input, Button, Collapse, message, Checkbox } from "antd";
+import { API_USER_CONTROL } from "../constants/endpoints";
+import "./component-css-files/messageTheme.css";
 
 // message creates a little window that displays text based on what is provided
 // figured it would be good for the user experience
@@ -21,14 +23,23 @@ const UserCreateDelete = () => {
       });
 
       if (response.ok) {
-        message.success("User created successfully");
+        message.success({
+          content: "User created successfully",
+          className: "custom-message",
+        });
         createForm.resetFields();
       } else {
         const errorData = await response.json();
-        message.error(`Error: ${errorData.message}`);
+        message.error({
+          content: `Error: ${errorData.message}`,
+          className: "custom-message",
+        });
       }
     } catch (error) {
-      message.error(`Error: ${error.message}`);
+      message.error({
+        content: `Error: ${error.message}`,
+        className: "custom-message",
+      });
     }
   };
 
@@ -43,14 +54,23 @@ const UserCreateDelete = () => {
       });
 
       if (response.ok) {
-        message.success("User deleted successfully");
+        message.success({
+          content: "User deleted successfully",
+          className: "custom-message",
+        });
         deleteForm.resetFields();
       } else {
         const errorData = await response.json();
-        message.error(`Error: ${errorData.message}`);
+        message.error({
+          content: `Error: ${errorData.message}`,
+          className: "custom-message",
+        });
       }
     } catch (error) {
-      message.error(`Error: ${error.message}`);
+      message.error({
+        content: `Error: ${error.message}`,
+        className: "custom-message",
+      });
     }
   };
 
@@ -93,7 +113,7 @@ const UserCreateDelete = () => {
             <Input.Password />
           </Form.Item>
           <Form.Item name="admin" label="Admin" valuePropName="checked">
-            <Input.Checkbox />
+            <Checkbox />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">
