@@ -15,7 +15,7 @@ import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
 import Homepage from "./pages/homepage.jsx";
 
 import './App.css'
-
+import './navbar.css'
 
 function App() {
   return (
