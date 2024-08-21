@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/aboutus.jsx";
 import MerchantServices from "./pages/merchantservices.jsx";
 import Gateway from "./pages/gateway.jsx";
@@ -14,25 +10,41 @@ import ContactUs from "./pages/constactus.jsx";
 import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
 import Homepage from "./pages/homepage.jsx";
 
+
 import './App.css'
 import './navbar.css'
+import "./App.css";
+import { ConfigProvider } from "antd";
+import AdminPage from "./components/adminPage.jsx";
+
 
 function App() {
   return (
-  <ApiKeyProvider>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/merchantservices" element={<MerchantServices />} />
-        <Route path="/gateway" element={<Gateway />} />
-        <Route path="/fuelcard" element={<FuelCardSolutions />} />
-        <Route path="/atmsolutions" element={<ATMSolutions />} />
-        <Route path="/achsolutions" element={<ACHSolutions />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-      </Routes>
-  </Router>
-</ApiKeyProvider>
+    <ApiKeyProvider>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: "#787878",
+            colorBgContainer: "#141414",
+            colorText: "#f3f3f3",
+          },
+        }}
+      >
+        <Router>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/merchantservices" element={<MerchantServices />} />
+            <Route path="/gateway" element={<Gateway />} />
+            <Route path="/fuelcard" element={<FuelCardSolutions />} />
+            <Route path="/atmsolutions" element={<ATMSolutions />} />
+            <Route path="/achsolutions" element={<ACHSolutions />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/admin" element={<AdminPage />} />
+          </Routes>
+        </Router>
+      </ConfigProvider>
+    </ApiKeyProvider>
   );
 }
 
