@@ -1,0 +1,17 @@
+/* applies the text color originally on the element to ensure it respects it */
+.custom-message {
+  color: #f7f7f7 !important; 
+  /* !important makes it a priority over other css, will update with consistent styles */
+}
+
+/* Targeting the content inside the message bubble (the bubble itself) */
+.custom-message .ant-message-notice-content {
+  background-color: #141414 !important;
+  color: #f3f3f3 !important;
+  border-radius: 8px; 
+}
+
+/* Targeting the text inside the message bubble */
+.custom-message .ant-message-custom-content {
+  color: #f3f3f3 !important;
+}
