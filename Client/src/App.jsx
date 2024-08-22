@@ -12,7 +12,7 @@ import Homepage from "./pages/homepage.jsx";
 
 import "./App.css";
 import { ConfigProvider } from "antd";
-import AdminPage from "./components/adminPage.jsx";
+import AdminPage from "./pages/adminPage.jsx";
 
 function App() {
   return (
