@@ -1,0 +1,34 @@
+.about-us-container {
+  padding: 50px;
+  background-color: black; /* Set background color if needed */
+}
+
+.text-col {
+  padding-right: 20px;
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 400px; /* Adjust this size based on your design */
+  height: auto;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.buttons {
+  margin-top: 20px;
+}
