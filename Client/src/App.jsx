@@ -6,10 +6,11 @@ import Gateway from "./pages/gateway.jsx";
 import FuelCardSolutions from "./pages/fuelcard.jsx";
 import ATMSolutions from "./pages/atmsolutions.jsx";
 import ACHSolutions from "./pages/achsolutions.jsx";
-import ContactUs from "./pages/constactus.jsx";
+import ContactUs from "./pages/contactus.jsx";
 import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
 import Homepage from "./pages/homepage.jsx";
 
+<<<<<<< HEAD
 import "./App.css";
 import { ConfigProvider } from "antd";
 import AdminPage from "./components/adminPage.jsx";
@@ -26,6 +27,16 @@ function App() {
   </Router>
 </ApiKeyProvider>
 =======
+=======
+
+import "./App.css";
+import { ConfigProvider } from "antd";
+import AdminPage from "./pages/adminPage.jsx";
+
+
+function App() {
+  return (
+>>>>>>> f3bfe5f0dc6480946e159e6d70fc30e9c1910494
     <ApiKeyProvider>
       <ConfigProvider
         theme={{
@@ -51,7 +62,10 @@ function App() {
         </Router>
       </ConfigProvider>
     </ApiKeyProvider>
+<<<<<<< HEAD
 >>>>>>> c2c6ec95937c4558049d0e184b2547a73b2b878d
+=======
+>>>>>>> f3bfe5f0dc6480946e159e6d70fc30e9c1910494
   );
 }
 
