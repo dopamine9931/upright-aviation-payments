@@ -10,10 +10,9 @@ import Gateway from "./pages/gateway.jsx";
 import FuelCardSolutions from "./pages/fuelcard.jsx";
 import ATMSolutions from "./pages/atmsolutions.jsx";
 import ACHSolutions from "./pages/achsolutions.jsx";
-import ContactUs from "./pages/constactus.jsx";
+import ContactUs from "./pages/contactus.jsx";
 import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
 import Homepage from "./pages/homepage.jsx";
-
 import './App.css'
 
 
