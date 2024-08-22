@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import LoginForm from "../components/loginForm";
 import UserCreateDelete from "../components/userCreateDelete";
+import DisplayLeads from "../components/displayLeads";
 
 const AdminPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -25,7 +26,7 @@ const AdminPage = () => {
         />
       ) : (
         <>
-          <div>Placeholder content, replace with leads</div>
+          <DisplayLeads/>
           {isAdmin && <UserCreateDelete />}
         </>
       )}

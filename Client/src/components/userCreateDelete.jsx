@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Form, Input, Button, Collapse, message, Checkbox } from "antd";
 import { API_USER_CONTROL } from "../constants/endpoints";
+import { ApiKeyContext } from "../context/apiKeyContext"; // Ensure the path is correct
 import "./component-css-files/messageTheme.css";
-
-// message creates a little window that displays text based on what is provided
-// figured it would be good for the user experience
 
 const { Panel } = Collapse;
 
 const UserCreateDelete = () => {
   const [createForm] = Form.useForm();
   const [deleteForm] = Form.useForm();
+  const apiKey = useContext(ApiKeyContext); // Retrieve the API key from context
 
   const handleCreate = async (values) => {
     try {
@@ -18,6 +17,7 @@ const UserCreateDelete = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": apiKey, // Include the API key in the request headers
         },
         body: JSON.stringify(values),
       });
@@ -49,6 +49,7 @@ const UserCreateDelete = () => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": apiKey, s
         },
         body: JSON.stringify(values),
       });
