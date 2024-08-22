@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import LoginForm from "./loginForm";
-import UserCreateDelete from "./userCreateDelete";
+import LoginForm from "../components/loginForm";
+import UserCreateDelete from "../components/userCreateDelete";
 
 const AdminPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
