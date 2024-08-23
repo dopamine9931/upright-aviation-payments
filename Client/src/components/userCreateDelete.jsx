@@ -1,14 +1,15 @@
-import React from "react";
-import { Form, Input, Button, Collapse, message } from "antd";
-
-// message creates a little window that displays text based on what is provided
-// figured it would be good for the user experience
+import React, { useContext } from "react";
+import { Form, Input, Button, Collapse, message, Checkbox } from "antd";
+import { API_USER_CONTROL } from "../constants/endpoints";
+import { ApiKeyContext } from "../context/apiKeyContext"; // Ensure the path is correct
+import "./component-css-files/messageTheme.css";
 
 const { Panel } = Collapse;
 
 const UserCreateDelete = () => {
   const [createForm] = Form.useForm();
   const [deleteForm] = Form.useForm();
+  const apiKey = useContext(ApiKeyContext); // Retrieve the API key from context
 
   const handleCreate = async (values) => {
     try {
@@ -16,19 +17,29 @@ const UserCreateDelete = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": apiKey, // Include the API key in the request headers
         },
         body: JSON.stringify(values),
       });
 
       if (response.ok) {
-        message.success("User created successfully");
+        message.success({
+          content: "User created successfully",
+          className: "custom-message",
+        });
         createForm.resetFields();
       } else {
         const errorData = await response.json();
-        message.error(`Error: ${errorData.message}`);
+        message.error({
+          content: `Error: ${errorData.message}`,
+          className: "custom-message",
+        });
       }
     } catch (error) {
-      message.error(`Error: ${error.message}`);
+      message.error({
+        content: `Error: ${error.message}`,
+        className: "custom-message",
+      });
     }
   };
 
@@ -38,19 +49,29 @@ const UserCreateDelete = () => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": apiKey, s
         },
         body: JSON.stringify(values),
       });
 
       if (response.ok) {
-        message.success("User deleted successfully");
+        message.success({
+          content: "User deleted successfully",
+          className: "custom-message",
+        });
         deleteForm.resetFields();
       } else {
         const errorData = await response.json();
-        message.error(`Error: ${errorData.message}`);
+        message.error({
+          content: `Error: ${errorData.message}`,
+          className: "custom-message",
+        });
       }
     } catch (error) {
-      message.error(`Error: ${error.message}`);
+      message.error({
+        content: `Error: ${error.message}`,
+        className: "custom-message",
+      });
     }
   };
 
@@ -93,7 +114,7 @@ const UserCreateDelete = () => {
             <Input.Password />
           </Form.Item>
           <Form.Item name="admin" label="Admin" valuePropName="checked">
-            <Input.Checkbox />
+            <Checkbox />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">

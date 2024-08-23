@@ -3,6 +3,7 @@ import { Form, Input, Button, Modal } from 'antd';
 import { useForm } from 'antd/es/form/Form';
 import { API_LEAD_SUBMIT } from '../constants/endpoints';
 import { ApiKeyContext } from '../context/apiKeyContext';
+import "./component-css-files/modalTheme.css"
 
 //take in isModal prop to determine how to show the form. 
 const LeadCapture = ({ isModal }) => {
@@ -146,6 +147,7 @@ const LeadCapture = ({ isModal }) => {
           cancelText="Cancel"
           onCancel={handleCancel}
           onOk={() => form.submit()}
+          className='custom-modal'
         >
           {formContent}
         </Modal>
