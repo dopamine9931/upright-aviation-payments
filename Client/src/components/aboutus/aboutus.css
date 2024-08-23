@@ -1,6 +1,6 @@
 .about-us-container {
   padding: 50px;
-  background-color: black; /* Set background color if needed */
+  background-color: black;
 }
 
 .text-col {
@@ -15,7 +15,7 @@
 
 .image-placeholder {
   width: 100%;
-  max-width: 400px; /* Adjust this size based on your design */
+  max-width: 400px;
   height: auto;
   background-color: #e0e0e0;
   display: flex;
@@ -26,7 +26,7 @@
 .image-placeholder img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Optional: Add rounded corners */
+
 }
 
 .buttons {

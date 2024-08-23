@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Typography, Button } from "antd";
 import "./aboutus.css"; // You will create this CSS file for styling
-import LeadCapture from "./components/leadCapture";
+import LeadCapture from "../leadCapture";
 const { Title, Paragraph } = Typography;
 
 const AboutUsHero = () => {
@@ -19,15 +19,12 @@ const AboutUsHero = () => {
             allowing you to focus on what you do best.
           </Paragraph>
           <div className="buttons">
-            <Button type="primary" style={{ marginRight: "10px" }}>
-              Get in Touch
-            </Button>
-            <Button>Learn More</Button>
+            <LeadCapture isModal={true} />
           </div>
         </Col>
         <Col xs={24} md={12} className="image-col">
           <div className="image-placeholder">
-            <img src="/path-to-your-image.jpg" alt="About Us" />
+            <img src="/avipay_logo_text.jpg" alt="About Us" />
           </div>
         </Col>
       </Row>
