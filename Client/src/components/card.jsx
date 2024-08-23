@@ -1,7 +1,8 @@
 import React from "react";
 import { Card } from "antd";
+const { Meta } = Card;
 
-function Card() {
+const Card() {
   return (
     <Card
       hoverable
@@ -10,7 +11,7 @@ function Card() {
       }}
       cover={<img alt="example" src="http://placekitten.com/g/200/300" />}
     >
-      <Meta title="placeholder" description="www.instagram.com" />
+      <Meta title="title placeholder" description="insert website" />
     </Card>
   );
 }
