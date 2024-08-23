@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
-const contentStyle = {
+const carouselCardStyle = {
   height: "300px", // Adjust height as needed
   color: "#fff",
   lineHeight: "300px", // Adjust line height as needed
@@ -14,7 +14,7 @@ const contentStyle = {
 
 const CarouselCard = () => (
   <Carousel autoplay>
-    <div>
+    <div style={carouselCardStyle}>
       <Link to="/path-to-page-1">
         <Card
           hoverable
@@ -25,7 +25,7 @@ const CarouselCard = () => (
         </Card>
       </Link>
     </div>
-    <div>
+    <div style={carouselCardStyle}>
       <Link to="/path-to-page-2">
         <Card
           hoverable
@@ -36,7 +36,7 @@ const CarouselCard = () => (
         </Card>
       </Link>
     </div>
-    <div>
+    <div style={carouselCardStyle}>
       <Link to="/path-to-page-3">
         <Card
           hoverable
@@ -47,7 +47,7 @@ const CarouselCard = () => (
         </Card>
       </Link>
     </div>
-    <div>
+    <div style={carouselCardStyle}>
       <Link to="/path-to-page-4">
         <Card
           hoverable
