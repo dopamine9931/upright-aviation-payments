@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Typography, Button } from "antd";
-// import "./aboutus.css"; // You will create this CSS file for styling
-
+import "./aboutus.css"; // You will create this CSS file for styling
+import LeadCapture from "./components/leadCapture";
 const { Title, Paragraph } = Typography;
 
 const AboutUsHero = () => {
