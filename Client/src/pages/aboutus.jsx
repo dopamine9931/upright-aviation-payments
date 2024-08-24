@@ -9,6 +9,6 @@ function AboutUs () {
     <MeetOurTeam />
     </>
   );
-};
+}
 
 export default AboutUs;
