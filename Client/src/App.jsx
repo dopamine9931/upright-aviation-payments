@@ -9,9 +9,6 @@ import ACHSolutions from "./pages/achsolutions.jsx";
 import ContactUs from "./pages/contactus.jsx";
 import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
 import Homepage from "./pages/homepage.jsx";
-import CarouselCard from "./CarouselCard";
-
-
 import "./App.css";
 import { ConfigProvider } from "antd";
 import AdminPage from "./pages/adminPage.jsx";
@@ -19,6 +16,7 @@ import AdminPage from "./pages/adminPage.jsx";
 
 function App() {
   return (
+
     <ApiKeyProvider>
       <ConfigProvider
         theme={{
@@ -44,6 +42,7 @@ function App() {
         </Router>
       </ConfigProvider>
     </ApiKeyProvider>
+
   );
 }
 
