@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Col, Typography, Button } from "antd";
-import "./aboutus.css"; // You will create this CSS file for styling
+import { Row, Col, Typography } from "antd";
+import "../component-css-files/aboutus.css";
 import LeadCapture from "../leadCapture";
 const { Title, Paragraph } = Typography;
 

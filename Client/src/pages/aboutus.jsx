@@ -1,13 +1,13 @@
-import React, { Routes, Route } from "react";
-// import React from "react";
-import { Card } from "antd";
+import React from "react";
 import AboutUsHero from "../components/aboutus/aboutusHero";
-
-// const { Meta } = Card;
+import MeetOurTeam from "../components/aboutus/aboutusTeam";
 
 function AboutUs () {
   return (
+    <>
     <AboutUsHero />
+    <MeetOurTeam />
+    </>
   );
 };
 
