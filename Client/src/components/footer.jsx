@@ -6,3 +6,5 @@
         </footer>
     );
   };
+
+  export default Footer;

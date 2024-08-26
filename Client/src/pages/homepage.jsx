@@ -1,8 +1,8 @@
 import React, { Routes, Route } from "react";
-import { Layout, } from "antd";
-import LeadCapture from "../components/leadCapture";
 
+import { Layout, Header, Content, Footer } from "antd";
 import { Button } from "antd"; //add an import call on your components pulled from antd (in your component.jsx)
+import LeadCapture from "../components/leadCapture";
 //adding a button to test, delete in future version
 
 function Homepage() {
@@ -27,7 +27,7 @@ function Homepage() {
           </ul>
         </nav>
       </header>
-
+      
       <main>
         <section id="home" className="home">
           <h1>Welcome to Aviation Payments</h1>
@@ -79,7 +79,6 @@ function Homepage() {
           <LeadCapture isModal={false} />
         </section>
       </main>
-
       <footer className="footer">
         <p>Lorem Ipsum</p>
       </footer>
@@ -88,3 +87,5 @@ function Homepage() {
 }
 
 export default Homepage;
+
+
