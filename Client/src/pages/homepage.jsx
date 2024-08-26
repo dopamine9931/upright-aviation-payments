@@ -1,9 +1,5 @@
 import React, { Routes, Route } from "react";
-
-import { Layout, Header, Content, Footer } from "antd";
-import { Button } from "antd"; //add an import call on your components pulled from antd (in your component.jsx)
 import LeadCapture from "../components/leadCapture";
-//adding a button to test, delete in future version
 
 function Homepage() {
   return (
