@@ -25,7 +25,7 @@ function Homepage() {
           </ul>
         </nav>
       </header>
-      
+
       <main>
         <section id="home" className="home">
           <h1>Welcome to Aviation Payments</h1>
@@ -85,5 +85,3 @@ function Homepage() {
 }
 
 export default Homepage;
-
-
