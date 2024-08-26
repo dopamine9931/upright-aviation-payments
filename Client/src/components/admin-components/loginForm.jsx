@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
-import { API_USER_CONTROL } from "../constants/endpoints";
+import { API_USER_CONTROL } from "../../constants/endpoints";
 import { Form, Input, Button } from "antd";
-import { ApiKeyContext } from "../context/apiKeyContext";
-
+import { ApiKeyContext } from "../../context/apiKeyContext";
 
 const LoginForm = ({ onTokenUpdate, onAdminStatusUpdate }) => {
   const [error, setError] = useState("");

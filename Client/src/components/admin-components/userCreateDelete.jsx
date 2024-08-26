@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Form, Input, Button, Collapse, message, Checkbox } from "antd";
-import { API_USER_CONTROL } from "../constants/endpoints";
-import { ApiKeyContext } from "../context/apiKeyContext"; // Ensure the path is correct
-import "./component-css-files/messageTheme.css";
+import { API_USER_CONTROL } from "../../constants/endpoints";
+import { ApiKeyContext } from "../../context/apiKeyContext"; 
+import "../component-css-files/messageTheme.css";
 
 const { Panel } = Collapse;
 
@@ -49,7 +49,8 @@ const UserCreateDelete = () => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": apiKey, s
+          "x-api-key": apiKey,
+          s,
         },
         body: JSON.stringify(values),
       });
