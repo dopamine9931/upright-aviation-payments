@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Table, Spin, Button, Typography } from "antd";
-import { API_LEAD_Display } from "../constants/endpoints";
-import { ApiKeyContext } from "../context/apiKeyContext";
-const { Title } = Typography;
+import { Collapse, Spin, Button, Typography } from "antd";
+import { API_LEAD_Display } from "../../constants/endpoints";
+import { ApiKeyContext } from "../../context/apiKeyContext";
 
-const DisplayLeads = () => {
+const { Title } = Typography;
+const { Panel } = Collapse;
+
+const MobileDisplayLeads = () => {
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -51,40 +53,43 @@ const DisplayLeads = () => {
     return <p>No leads found.</p>;
   }
 
-  const columns = [
-    { title: "First Name", dataIndex: "firstName", key: "firstName" },
-    { title: "Last Name", dataIndex: "lastName", key: "lastName" },
-    { title: "Company", dataIndex: "company", key: "company" },
-    { title: "Title", dataIndex: "title", key: "title" },
-    { title: "Email", dataIndex: "email", key: "email" },
-    { title: "Phone", dataIndex: "phone", key: "phone" },
-    { title: "Extension", dataIndex: "extension", key: "extension" },
-    { title: "Product", dataIndex: "product", key: "product" },
-    {
-      title: "Contacted",
-      dataIndex: "contacted",
-      key: "contacted",
-      render: (contacted) => (contacted ? "Yes" : "No"),
-    },
-  ];
-
   return (
     <>
       <Title level={3} style={{ marginBottom: "20px" }}>
         Lead Capture Form Data
       </Title>
-      <Table
-        columns={columns}
-        dataSource={leads}
-        rowKey="_id"
-        pagination={{ pageSize: 5 }}
-        bordered
-      />
-      <Button type="primary" onClick={fetchLeads} style={{ marginTop: "20px" }}>
+      <Collapse accordion>
+        {leads.map((lead) => (
+          <Panel header={`${lead.firstName} ${lead.lastName}`} key={lead._id}>
+            <p>
+              <strong>Company:</strong> {lead.company}
+            </p>
+            <p>
+              <strong>Title:</strong> {lead.title}
+            </p>
+            <p>
+              <strong>Email:</strong> {lead.email}
+            </p>
+            <p>
+              <strong>Phone:</strong> {lead.phone}
+            </p>
+            <p>
+              <strong>Extension:</strong> {lead.extension}
+            </p>
+            <p>
+              <strong>Product:</strong> {lead.product}
+            </p>
+            <p>
+              <strong>Contacted:</strong> {lead.contacted ? "Yes" : "No"}
+            </p>
+          </Panel>
+        ))}
+      </Collapse>
+      <Button type="primary" onClick={fetchLeads} style={{ marginTop: "20px", marginBottom: "20px"}}>
         Refresh Leads
       </Button>
     </>
   );
 };
 
-export default DisplayLeads;
+export default MobileDisplayLeads;

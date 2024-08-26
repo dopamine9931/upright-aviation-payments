@@ -1,12 +1,13 @@
-import React from "react";
-import { useState } from "react";
-import LoginForm from "../components/loginForm";
-import UserCreateDelete from "../components/userCreateDelete";
-import DisplayLeads from "../components/displayLeads";
+import React, { useState, useEffect } from "react";
+import LoginForm from "../components/admin-components/loginForm";
+import UserCreateDelete from "../components/admin-components/userCreateDelete";
+import DisplayLeads from "../components/admin-components/displayLeads";
+import MobileDisplayLeads from "../components/admin-components/mobileDisplayLeads"; // Import the mobile version
 
 const AdminPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1198); // Determine if the screen is mobile
 
   const handleTokenUpdate = (token) => {
     localStorage.setItem("token", token);
@@ -17,6 +18,15 @@ const AdminPage = () => {
     setIsAdmin(status);
   };
 
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 1198); // Update mobile state on resize
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       {!isLoggedIn ? (
@@ -26,7 +36,7 @@ const AdminPage = () => {
         />
       ) : (
         <>
-          <DisplayLeads/>
+          {isMobile ? <MobileDisplayLeads /> : <DisplayLeads />}
           {isAdmin && <UserCreateDelete />}
         </>
       )}
