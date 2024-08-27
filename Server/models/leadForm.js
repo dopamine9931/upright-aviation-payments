@@ -16,7 +16,7 @@ const LeadCapture = new mongoose.Schema({
     company: {
         type: String,
         unique: false,
-        required: true,
+        required: false,
     },
     title: {
         type: String,
