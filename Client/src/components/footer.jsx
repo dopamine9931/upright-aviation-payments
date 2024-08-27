@@ -1,10 +1,45 @@
   // Footer
-  const Footer = () => {
-    return (
-      <footer>
-            <p>&copy; 2024 Aviation Payments. Loren Ipsum etc... </p>
-        </footer>
-    );
-  };
+  // const Footer = () => {
+  //   return (
+  //     <footer>
+  //           <p>&copy; 2024 Aviation Payments. Loren Ipsum etc... </p>
+  //       </footer>
+  //   );
+  // };
 
-  export default Footer;
+  // export default Footer;
+
+
+import React from "react";
+import logo from "/avipay_logo_no_text.jpg";
+import "./component-css-files/footer.css"; 
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-top">
+        <div className="logo">
+          <img src={logo} alt="Company Logo" className="footer-logo" />
+        </div>
+        <nav className="footer-nav">
+          <a href="/aboutus">About Us</a>
+          <a href="/services">Services</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/faq">FAQ</a>
+          <a href="/blog">Blog</a>
+        </nav>
+      </div>
+      <hr className="footer-divider" />
+      <div className="footer-bottom">
+        <p>&copy; 2024 Aviation Payments. All rights reserved.</p>
+        <nav className="footer-bottom-nav">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms and Conditions</a>
+          <a href="/cookie-policy">Cookie Policy</a>
+        </nav>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

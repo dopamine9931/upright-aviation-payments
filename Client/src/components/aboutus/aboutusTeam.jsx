@@ -74,7 +74,7 @@ const MeetOurTeam = () => {
                   <LinkedinOutlined />
                 </a>,
                 <a href={`mailto:${member.email}`}>
-                  <MailOutlined />
+                  <MailOutlined syle={{ color: "white" }} />
                 </a>,
               ]}
             >

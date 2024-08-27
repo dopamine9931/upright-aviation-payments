@@ -68,6 +68,7 @@ body {
 .ant-card-cover img {
   object-fit: cover;
   height: 200px;
+  color: white;
 }
 
 .ant-card-meta-title {

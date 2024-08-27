@@ -80,7 +80,7 @@ const LeadCapture = ({ isModal }) => {
       <Form.Item
         name="company"
         label="Company"
-        rules={[{ required: true, message: 'Please input your company!' }]}
+        rules={[{ message: 'Please input your company!' }]}
       >
         <Input />
       </Form.Item>

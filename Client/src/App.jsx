@@ -25,10 +25,11 @@ function App() {
             colorPrimary: "#787878",
             colorBgContainer: "#141414",
             colorText: "#f3f3f3",
+            colorIcon: "#ffffff"
           },
         }}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
