@@ -77,7 +77,7 @@ const UserCreateDelete = () => {
   };
 
   return (
-    <Collapse defaultActiveKey={["1", "2"]}>
+    <Collapse defaultActiveKey={[]}>
       <Panel header="Create User" key="1">
         <Form form={createForm} onFinish={handleCreate} layout="vertical">
           <Form.Item
