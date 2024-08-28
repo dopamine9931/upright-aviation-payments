@@ -8,6 +8,7 @@ import ATMSolutions from "./pages/atmsolutions.jsx";
 import ACHSolutions from "./pages/achsolutions.jsx";
 import ContactUs from "./pages/contactus.jsx";
 import { ApiKeyProvider } from "./context/apiKeyContext.jsx";
+import OurSolutions from "./pages/oursolutions.jsx";
 import Homepage from "./pages/homepage.jsx";
 import "./App.css";
 import { ConfigProvider } from "antd";
@@ -17,7 +18,6 @@ import Footer from "./components/footer.jsx";
 
 function App() {
   return (
-
     <ApiKeyProvider>
       <ConfigProvider
         theme={{
@@ -25,13 +25,15 @@ function App() {
             colorPrimary: "#787878",
             colorBgContainer: "#141414",
             colorText: "#f3f3f3",
+            colorIcon: "#ffffff"
           },
         }}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/oursolutions" element={<OurSolutions />} />
             <Route path="/merchantservices" element={<MerchantServices />} />
             <Route path="/gateway" element={<Gateway />} />
             <Route path="/fuelcard" element={<FuelCardSolutions />} />
@@ -45,7 +47,6 @@ function App() {
         <Footer />
       </ConfigProvider>
     </ApiKeyProvider>
-
   );
 }
 

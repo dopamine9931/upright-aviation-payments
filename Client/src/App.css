@@ -58,8 +58,8 @@
 /* returning here to complete -le */
 body {
   background-color: black;
-  color: ;
-  font-family: ;
+  color: white;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -133,8 +133,19 @@ z-index: 1000; /* set on top of the other elements */
 }
 
 .header-font {
-  color:
+  color: white;
 }
+
+.anticon {
+  color: white; /* Default icon color */
+  font-size: 1.5em; /* Increase the icon size */
+  transition: color 0.3s ease; /* Smooth transition for the color change */
+}
+
+.anticon:hover {
+  color: gray; /* Change icon to gray on hover */
+}
+
 
 /* Footer styles (to be deleted) 
 .footer {
