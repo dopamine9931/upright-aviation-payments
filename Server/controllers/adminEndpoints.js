@@ -2,13 +2,14 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
+const apiKeyAuth = require("../middlewares/apiKey");
 
 // Retrieve SALT and JWT_KEY from environment variables
 const SALT = parseInt(process.env.SALT); // Convert to integer
 const JWT_KEY = process.env.JWT_KEY;
 
 // Route for user signup
-router.post("/signup", async (req, res) => {
+router.post("/signup", apiKeyAuth, async (req, res) => {
   try {
     // Extracting variables off the req
     const { firstName, email, password, admin = false } = req.body;
@@ -43,7 +44,7 @@ router.post("/signup", async (req, res) => {
 });
 
 // Route for user login
-router.post("/login", async (req, res) => {
+router.post("/login", apiKeyAuth, async (req, res) => {
   try {
     const { email, password } = req.body;
 

@@ -9,7 +9,7 @@ function FuelCardSolutions() {
   return (
     <div>
       <h1> Aviation Payments </h1>
-      <h2>Fule Card</h2>
+      <h2>Fuel Card</h2>
     </div>
   );
 };

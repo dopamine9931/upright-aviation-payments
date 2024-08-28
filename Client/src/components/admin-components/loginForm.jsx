@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { API_USER_CONTROL } from "../constants/endpoints";
+import React, { useState, useContext } from "react";
+import { API_USER_CONTROL } from "../../constants/endpoints";
 import { Form, Input, Button } from "antd";
+import { ApiKeyContext } from "../../context/apiKeyContext";
 
 const LoginForm = ({ onTokenUpdate, onAdminStatusUpdate }) => {
   const [error, setError] = useState("");
+  const apiKey = useContext(ApiKeyContext);
 
   // Handles the token and admin status
   const handleSubmit = async (values) => {
@@ -12,6 +14,7 @@ const LoginForm = ({ onTokenUpdate, onAdminStatusUpdate }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": `${apiKey}`,
         },
         body: JSON.stringify(values),
       });
