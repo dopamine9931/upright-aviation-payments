@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Collapse, Spin, Button, Typography } from "antd";
+import { Collapse, Spin, Button, Typography, Pagination } from "antd";
 import { API_LEAD_Display } from "../../constants/endpoints";
 import { ApiKeyContext } from "../../context/apiKeyContext";
 
@@ -10,6 +10,8 @@ const MobileDisplayLeads = () => {
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const leadsPerPage = 5; // Customize the number of leads per page
   const apiKey = useContext(ApiKeyContext);
 
   const fetchLeads = async () => {
@@ -53,13 +55,22 @@ const MobileDisplayLeads = () => {
     return <p>No leads found.</p>;
   }
 
+  // Calculate the current leads to display based on pagination
+  const indexOfLastLead = currentPage * leadsPerPage;
+  const indexOfFirstLead = indexOfLastLead - leadsPerPage;
+  const currentLeads = leads.slice(indexOfFirstLead, indexOfLastLead);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <>
       <Title level={3} style={{ marginBottom: "20px" }}>
         Lead Capture Form Data
       </Title>
       <Collapse accordion>
-        {leads.map((lead) => (
+        {currentLeads.map((lead) => (
           <Panel header={`${lead.firstName} ${lead.lastName}`} key={lead._id}>
             <p>
               <strong>Company:</strong> {lead.company}
@@ -85,7 +96,18 @@ const MobileDisplayLeads = () => {
           </Panel>
         ))}
       </Collapse>
-      <Button type="primary" onClick={fetchLeads} style={{ marginTop: "20px", marginBottom: "20px"}}>
+      <Pagination
+        current={currentPage}
+        pageSize={leadsPerPage}
+        total={leads.length}
+        onChange={handlePageChange}
+        style={{ marginTop: "20px", textAlign: "center" }}
+      />
+      <Button
+        type="primary"
+        onClick={fetchLeads}
+        style={{ marginTop: "20px", marginBottom: "20px" }}
+      >
         Refresh Leads
       </Button>
     </>
