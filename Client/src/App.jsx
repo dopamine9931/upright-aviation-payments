@@ -15,6 +15,7 @@ import { ConfigProvider } from "antd";
 import AdminPage from "./pages/adminPage.jsx";
 // import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
+import Testimoanials from "./components/testimoanials.jsx";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
             colorPrimary: "#787878",
             colorBgContainer: "#141414",
             colorText: "#f3f3f3",
-            colorIcon: "#ffffff"
+            colorIcon: "#ffffff",
           },
         }}
       >
@@ -51,3 +52,4 @@ function App() {
 }
 
 export default App;
+

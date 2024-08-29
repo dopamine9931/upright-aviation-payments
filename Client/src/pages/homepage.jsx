@@ -2,6 +2,10 @@ import React, { Routes, Route } from "react";
 import LeadCapture from "../components/leadCapture";
 import InfoSection from "../components/infosection.jsx";
 import Solutions from "../components/solutions/solutioncards.jsx";
+import FormlessEmbed from "../components/formlessai";
+import Contactusmini from "../components/contactusmini";
+import Testimoanials from "../components/testimoanials";
+
 
 function Homepage() {
   return (
@@ -37,32 +41,6 @@ function Homepage() {
 
         <Solutions />
 
-        {/* <section id="services" className="services">
-          <h2>Our Services</h2>
-          // ! Need to create service grid/array -LE
-          <div className="service-grid">
-            <div className="consulting">
-              <h3>Solutions Consulting</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            </div>
-            <div className="merchant-services">
-              <h3>Merchant Services</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="connectivity">
-              <h3>Gateway Connectivity</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="pos-services">
-              <h3>Point-of-Sale Solutions</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="atm-services">
-              <h3>ATM Solutions</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
-        </section> */}
 
         <section id="about" className="about">
           <h2>About Us</h2>
@@ -74,18 +52,14 @@ function Homepage() {
             services that streamline and enhance financial transactions.{" "}
           </p>
         </section>
-
-        <section id="contact" className="contact">
-          <h2>Contact Us</h2>
-          // ! Need to confirm line 123 is correct for lead capture -LE
-          <LeadCapture isModal={false} />
-        </section>
+        <FormlessEmbed />
+        <Testimoanials />
+        <Contactusmini />
       </main>
-      <footer className="footer">
-        <p>Lorem Ipsum</p>
-      </footer>
+
     </div>
   );
 }
 
 export default Homepage;
+

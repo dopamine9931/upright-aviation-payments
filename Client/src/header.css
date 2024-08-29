@@ -1,5 +1,13 @@
+@import "antd/dist/antd.css"
 
-.header-font {
-  margin: 45px;
-  font-size: 2rem;
+@media {max-width:500px}  {
+  .headerMenu{
+    display: none;
+  }
+}
+
+@media {min-width:500px}  {
+  .menuIcon{
+    display: none;
+  }
 }
