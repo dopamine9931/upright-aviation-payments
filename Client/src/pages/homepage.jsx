@@ -1,5 +1,7 @@
 import React, { Routes, Route } from "react";
 import LeadCapture from "../components/leadCapture";
+import InfoSection from "../components/infosection.jsx";
+import Solutions from "../components/solutions/solutioncards.jsx";
 
 function Homepage() {
   return (
@@ -31,7 +33,11 @@ function Homepage() {
           <LeadCapture isModal={true} />
         </section>
 
-        <section id="services" className="services">
+        <InfoSection />
+
+        <Solutions />
+
+        {/* <section id="services" className="services">
           <h2>Our Services</h2>
           // ! Need to create service grid/array -LE
           <div className="service-grid">
@@ -56,7 +62,7 @@ function Homepage() {
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section id="about" className="about">
           <h2>About Us</h2>
