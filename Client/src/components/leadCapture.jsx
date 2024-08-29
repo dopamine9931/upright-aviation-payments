@@ -137,7 +137,7 @@ const LeadCapture = ({ isModal }) => {
   if (isModal) {
     return (
       <>
-        <Button type="primary" onClick={showModal} style={{ marginBottom: '20px' }}>
+        <Button type="primary" onClick={showModal} style={{ marginBottom: '20px', marginTop: '50px', padding: '24px 24px', fontSize: '20px', lineHeight: '1.5'}}>
           Get More Info!
         </Button>
         <Modal
