@@ -64,7 +64,11 @@ function AppMenu({ isInline = false }) {
   );
 }
 
+<<<<<<< HEAD
 //export default App;
+=======
+export default Navbar;
+>>>>>>> 7256c2a1a75f8b84a80883b559b45a5e235aabf4
 
 // Previous Navbar for deletion later -LE
 
@@ -96,7 +100,10 @@ function AppMenu({ isInline = false }) {
 
 // revised ant design Navbar -LE
 // includes drawer but can delete if necessary -LE
+<<<<<<< HEAD
 
 
 export default Navbar;
 
+=======
+>>>>>>> 7256c2a1a75f8b84a80883b559b45a5e235aabf4

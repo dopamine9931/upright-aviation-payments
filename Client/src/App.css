@@ -146,6 +146,9 @@ z-index: 1000; /* set on top of the other elements */
   color: rgb(22, 22, 22); /* Change icon to gray on hover */
 }
 
+.anticon-bulb {/* Product features icon size */
+  font-size: 3em;
+}
 
 /* Footer styles (to be deleted) 
 .footer {

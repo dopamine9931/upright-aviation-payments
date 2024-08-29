@@ -1,5 +1,8 @@
 import React, { Routes, Route } from "react";
 import LeadCapture from "../components/leadCapture";
+import FormlessEmbed from "../components/formlessai";
+import Contactusmini from "../components/contactusmini";
+import Testimoanials from "../components/testimoanials";
 
 function Homepage() {
   return (
@@ -68,18 +71,14 @@ function Homepage() {
             services that streamline and enhance financial transactions.{" "}
           </p>
         </section>
-
-        <section id="contact" className="contact">
-          <h2>Contact Us</h2>
-          // ! Need to confirm line 123 is correct for lead capture -LE
-          <LeadCapture isModal={false} />
-        </section>
+        <FormlessEmbed />
+        <Testimoanials />
+        <Contactusmini />
       </main>
-      <footer className="footer">
-        <p>Lorem Ipsum</p>
-      </footer>
+
     </div>
   );
 }
 
 export default Homepage;
+
