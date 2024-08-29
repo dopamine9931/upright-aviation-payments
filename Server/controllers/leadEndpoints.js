@@ -38,7 +38,7 @@ router.post("/api/createLead", apiKeyAuth, async (req, res) => {
 });
 
 //* Get all Leads
-//? mbanyea -- just created quick for testing 
+//? mbanyea -- just created quick for testing
 // updated the name and ran it through apiKeyAuth, haven't touched schema -DS
 router.get("/api/viewLeads", apiKeyAuth, async (req, res) => {
   try {
@@ -51,9 +51,10 @@ router.get("/api/viewLeads", apiKeyAuth, async (req, res) => {
       leads: leads,
     });
   } catch (err) {
-    console.error("Error retriving leads", err);
+    console.error("Error retrieving leads", err);
     res.status(500).json({ message: err.message });
   }
 });
+// need to add update leads route
 
 module.exports = router;
