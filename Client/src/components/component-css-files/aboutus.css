@@ -1,0 +1,103 @@
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+.about-us-container {
+  padding: 50px;
+  background-color: black;
+}
+
+.text-col {
+  padding-right: 20px;
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.meet-our-team-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: black;
+}
+
+.section-subtitle {
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.section-description {
+  margin-bottom: 40px;
+  color: white;
+}
+
+.ant-card {
+  text-align: left;
+  background-color: black; 
+}
+
+.ant-card-cover img {
+  object-fit: cover;
+  height: 200px;
+  color: white;
+}
+
+.ant-card-meta-title {
+  font-weight: bold;
+  color: white; /* Ensure the title text is white */
+}
+
+.ant-card-meta-description {
+  color: white;
+}
+.ant-card-actions {
+  background-color: black; /* Ensure the action bar is black */
+  border-top: none; /* Remove the top border */
+  display: flex;
+  justify-content: space-around; /* Space the icons evenly */
+  color: white; /* Make the icons white */
+}
+.ant-card-actions > li {
+  margin: 0;
+  border-right: none; /* Remove the white line between the icons */
+}
+
+.ant-card-actions > li > span,
+.ant-card-actions > li > a {
+  color: white; /* Make the icons white */
+  font-size: 18px; /* Adjust the icon size if necessary */
+}
+
+.ant-card-actions > li > span:hover,
+.ant-card-actions > li > a:hover {
+  color: #1890ff; /* Optional: Change color on hover */
+}
