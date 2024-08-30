@@ -10,6 +10,7 @@ function Navbar() {
     <div style={{ height: "15vh", backgroundColor: "black" }}>
       <div
         style={{
+          positioning: "sticky",
           backgroundColor: "black",
           height: 60,
           paddingLeft: 12,
@@ -33,7 +34,7 @@ function Navbar() {
           setOpenMENU(false);
         }}
         closable={false}
-        bodyStyle={{ backgroundColor: "darkgrey" }}
+        bodyStyle={{ backgroundColor: rgb (20, 21, 22), color: "white" }}
       >
         <AppMenu isInline />
       </Drawer>
@@ -63,7 +64,11 @@ function AppMenu({ isInline = false }) {
   );
 }
 
+<<<<<<< HEAD
+//export default App;
+=======
 export default Navbar;
+>>>>>>> 7256c2a1a75f8b84a80883b559b45a5e235aabf4
 
 // Previous Navbar for deletion later -LE
 
@@ -95,3 +100,10 @@ export default Navbar;
 
 // revised ant design Navbar -LE
 // includes drawer but can delete if necessary -LE
+<<<<<<< HEAD
+
+
+export default Navbar;
+
+=======
+>>>>>>> 7256c2a1a75f8b84a80883b559b45a5e235aabf4
