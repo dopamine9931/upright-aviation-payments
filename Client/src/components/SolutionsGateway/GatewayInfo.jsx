@@ -1,5 +1,5 @@
 import React from "react";
-import InfoSection from "../infoSection";
+import InfoSection from "../CompInfo";
 const GatewayInfo = () => {
   return (
     <div>
