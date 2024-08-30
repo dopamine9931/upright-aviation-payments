@@ -1,7 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Collapse, Spin, Button, Typography, Pagination } from "antd";
+import {
+  Collapse,
+  Spin,
+  Button,
+  Typography,
+  Pagination,
+  Switch,
+  message,
+} from "antd";
 import { API_LEAD_Display } from "../../constants/endpoints";
 import { ApiKeyContext } from "../../context/apiKeyContext";
+import "../component-css-files/messageTheme.css";
 
 const { Title } = Typography;
 const { Panel } = Collapse;
@@ -11,7 +20,7 @@ const MobileDisplayLeads = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const leadsPerPage = 5; // Customize the number of leads per page
+  const leadsPerPage = 5;
   const apiKey = useContext(ApiKeyContext);
 
   const fetchLeads = async () => {
@@ -39,6 +48,34 @@ const MobileDisplayLeads = () => {
     }
   };
 
+  const updateContactedStatus = async (email, newStatus) => {
+    try {
+      const response = await fetch(`${API_LEAD_Display}/updateLead`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": `${apiKey}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({ email, contacted: newStatus }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to update status");
+      }
+
+      const updatedLead = await response.json();
+      message.success({
+      content: `Lead ${updatedLead.Lead.firstName} ${updatedLead.Lead.lastName} updated successfully`,
+      className: "custom-message",
+    });
+      fetchLeads(); // Refresh leads after updating
+    } catch (err) {
+      message.error(err.message);
+    }
+  };
+
   useEffect(() => {
     fetchLeads();
   }, []);
@@ -48,14 +85,17 @@ const MobileDisplayLeads = () => {
   }
 
   if (error) {
-    return <p style={{ color: "red" }}>Error retrieving leads: {error}</p>;
+    message.error({
+      content: `Error retrieving leads: ${error}`,
+      className: "custom-message",
+    });
+    return null;
   }
 
   if (leads.length === 0) {
     return <p>No leads found.</p>;
   }
 
-  // Calculate the current leads to display based on pagination
   const indexOfLastLead = currentPage * leadsPerPage;
   const indexOfFirstLead = indexOfLastLead - leadsPerPage;
   const currentLeads = leads.slice(indexOfFirstLead, indexOfLastLead);
@@ -91,7 +131,17 @@ const MobileDisplayLeads = () => {
               <strong>Product:</strong> {lead.product}
             </p>
             <p>
-              <strong>Contacted:</strong> {lead.contacted ? "Yes" : "No"}
+              <strong>Contacted:</strong>{" "}
+              <Switch
+                checked={lead.contacted}
+                onChange={(checked) =>
+                  updateContactedStatus(lead.email, checked)
+                }
+                style={{
+                  backgroundColor: "#5e5e5e", // Slightly lighter than your page background
+                  borderColor: "#5e5e5e",
+                }}
+              />
             </p>
           </Panel>
         ))}
