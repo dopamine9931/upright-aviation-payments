@@ -34,7 +34,7 @@ function Navbar() {
           setOpenMENU(false);
         }}
         closable={false}
-        bodyStyle={{ backgroundColor: rgb (20, 21, 22), color: "white" }}
+        bodyStyle={{ backgroundColor: "black", color: "white" }}
       >
         <AppMenu isInline />
       </Drawer>
