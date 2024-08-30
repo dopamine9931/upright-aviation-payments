@@ -7,7 +7,7 @@ function Navbar() {
   const [openMENU, setOpenMENU] = useState(false);
 
   return (
-    <div style={{ height: "100vh", backgroundColor: "black" }}>
+    <div style={{ height: "15vh", backgroundColor: "black" }}>
       <div
         style={{
           backgroundColor: "black",

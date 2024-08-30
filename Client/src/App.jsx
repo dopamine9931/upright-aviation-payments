@@ -15,7 +15,6 @@ import { ConfigProvider } from "antd";
 import AdminPage from "./pages/adminPage.jsx";
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
-import Testimoanials from "./components/testimoanials.jsx";
 
 function App() {
   return (
@@ -30,7 +29,7 @@ function App() {
           },
         }}
       >
-        {/* <Navbar /> */}
+        <Navbar />
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
