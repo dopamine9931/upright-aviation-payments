@@ -1,8 +1,11 @@
 import React, { Routes, Route } from "react";
 import LeadCapture from "../components/leadCapture";
+import InfoSection from "../components/infosection.jsx";
+import Solutions from "../components/solutions/solutioncards.jsx";
 import FormlessEmbed from "../components/formlessai";
 import Contactusmini from "../components/contactusmini";
 import Testimoanials from "../components/testimoanials";
+
 
 function Homepage() {
   return (
@@ -34,32 +37,10 @@ function Homepage() {
           <LeadCapture isModal={true} />
         </section>
 
-        <section id="services" className="services">
-          <h2>Our Services</h2>
-          // ! Need to create service grid/array -LE
-          <div className="service-grid">
-            <div className="consulting">
-              <h3>Solutions Consulting</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
-            </div>
-            <div className="merchant-services">
-              <h3>Merchant Services</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="connectivity">
-              <h3>Gateway Connectivity</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="pos-services">
-              <h3>Point-of-Sale Solutions</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div className="atm-services">
-              <h3>ATM Solutions</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
-        </section>
+        <InfoSection />
+
+        <Solutions />
+
 
         <section id="about" className="about">
           <h2>About Us</h2>

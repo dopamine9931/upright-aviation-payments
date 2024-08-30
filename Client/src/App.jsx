@@ -13,7 +13,7 @@ import Homepage from "./pages/homepage.jsx";
 import "./App.css";
 import { ConfigProvider } from "antd";
 import AdminPage from "./pages/adminPage.jsx";
-import Navbar from "./components/navbar.jsx";
+// import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 import Testimoanials from "./components/testimoanials.jsx";
 
