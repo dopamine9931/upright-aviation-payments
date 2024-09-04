@@ -13,8 +13,8 @@ import Homepage from "./pages/homepage.jsx";
 import "./App.css";
 import { ConfigProvider } from "antd";
 import AdminPage from "./pages/adminPage.jsx";
-import Footer from "./components/footer.jsx";
 import Navbar from "./components/navbar.jsx";
+import Footer from "./components/footer.jsx";
 
 
 function App() {
