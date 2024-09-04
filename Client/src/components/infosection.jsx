@@ -21,7 +21,7 @@ const InfoSection = () => {
       </Col>
       <Col span={12} style={{ textAlign: "right", padding: "0 20px" }}>
         <img
-          src="/public/aviation_small.jpg"
+          src="/aviation_small.jpg"
           alt="Description"
           style={{ maxWidth: "100%", height: "auto" }}
         />

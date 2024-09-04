@@ -1,10 +1,10 @@
 import React, { Routes, Route } from "react";
-import LeadCapture from "../components/leadCapture";
 import InfoSection from "../components/infosection.jsx";
 import Solutions from "../components/solutions/solutioncards.jsx";
 import FormlessEmbed from "../components/formlessai";
 import Contactusmini from "../components/contactusmini";
 import Testimoanials from "../components/testimoanials";
+import TestimonialSlider from "../components/testimonialslider.jsx";
 
 
 
@@ -40,6 +40,7 @@ function Homepage() {
         <FormlessEmbed />
         
         <Testimoanials />
+        <TestimonialSlider />
 
         <Contactusmini />
 
