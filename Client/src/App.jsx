@@ -16,6 +16,7 @@ import AdminPage from "./pages/adminPage.jsx";
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 
+
 function App() {
   return (
     <ApiKeyProvider>
@@ -30,6 +31,7 @@ function App() {
         }}
       >
         <Navbar />
+
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
@@ -51,4 +53,3 @@ function App() {
 }
 
 export default App;
-
