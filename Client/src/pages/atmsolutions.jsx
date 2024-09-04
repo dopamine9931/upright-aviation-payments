@@ -7,8 +7,10 @@ function ATMSolutions() {
 
   return (
     <div>
-      <h1> Aviation Payments </h1>
-      <h2> ATM Solutions </h2>
+      
+      <h1> ATM Solutions </h1>
+
+      
     </div>
   );
 };
