@@ -8,7 +8,7 @@ function Consulting() {
   return (
     <div>
       <h1> Aviation Payments </h1>
-      <h2>Consulting</h2>
+      <h2> Consulting</h2>
     </div>
   );
 };

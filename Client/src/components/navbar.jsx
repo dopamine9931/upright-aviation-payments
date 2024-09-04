@@ -1,109 +1,77 @@
-
 import React, { useState } from "react";
 import { Menu, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
+import "../components/component-css-files/navbar-mobile.css"; // Adjust the path as needed
 
-function Navbar() {
-  const [openMENU, setOpenMENU] = useState(false);
+// Navbar component
+function Navbar({ currentPath = "" }) {
+  const [drawerVisible, setDrawerVisible] = useState(false);
+
+  // Function to show the drawer
+  const showDrawer = () => {
+    setDrawerVisible(true);
+  };
+
+  // Function to close the drawer
+  const closeDrawer = () => {
+    setDrawerVisible(false);
+  };
 
   return (
-    <div style={{ height: "100vh", backgroundColor: "black" }}>
-      <div
-        style={{
-          positioning: "sticky",
-          backgroundColor: "black",
-          height: 60,
-          paddingLeft: 12,
-          paddingTop: 12,
-        }}
-        className="menuIcon"
-      >
-        <MenuOutlined
-          style={{ color: "white", fontSize: 30 }}
-          onClick={() => setOpenMENU(true)}
-        />
+    <div className="navbar-container">
+      {/* Hamburger Button (Mobile view) */}
+      <div onClick={showDrawer} className="hamburger-button">
+        <MenuOutlined />
       </div>
-      <span className="headerMenu">
-        <AppMenu />
-      </span>
 
+      {/* Centered Menu Items (Desktop view) */}
+      <div className="menu-desktop">
+        <AppMenu currentPath={currentPath} mode="horizontal" />
+      </div>
+
+      {/* Drawer Component */}
       <Drawer
         placement="left"
-        open={openMENU}
-        onClose={() => {
-          setOpenMENU(false);
-        }}
         closable={false}
-        bodyStyle={{ backgroundColor: rgb (20, 21, 22), color: "white" }}
+        onClose={closeDrawer}
+        visible={drawerVisible}
+        bodyStyle={{ padding: 0 }}
       >
-        <AppMenu isInline />
+        <AppMenu currentPath={currentPath} mode="vertical" />
       </Drawer>
     </div>
   );
 }
 
-
-function AppMenu({ isInline = false }) {
+// AppMenu component
+function AppMenu({ currentPath, mode }) {
   return (
     <Menu
       style={{
-        height: "100vh",
         backgroundColor: "black",
         color: "white",
-        fontSize: 24,
+        fontSize: 30,
         border: "none",
+        textAlign: "left",
+        padding: "0 35px",
       }}
-      mode={isInline ? "inline" : "horizontal"}
-      items={[
-        { label: "Home", key: "home" },
-        { label: "Services", key: "services" },
-        { label: "Contact Us", key: "contact" },
-        { label: "About Us", key: "about" },
-      ]}
-    />
+      mode={mode}
+      selectedKeys={[currentPath]} // Highlight the selected menu item
+    >
+      <Menu.Item key="/">
+        <a href="/">Home</a>
+      </Menu.Item>
+      <Menu.Item key="/solutions">
+        <a href="/solutions">Solutions</a>
+      </Menu.Item>
+      <Menu.Item key="/contactus">
+        <a href="/contactus">Contact Us</a>
+      </Menu.Item>
+      <Menu.Item key="/aboutus">
+        <a href="/aboutus">About Us</a>
+      </Menu.Item>
+    </Menu>
   );
 }
 
-<<<<<<< HEAD
-//export default App;
-=======
 export default Navbar;
->>>>>>> 7256c2a1a75f8b84a80883b559b45a5e235aabf4
-
-// Previous Navbar for deletion later -LE
-
-// Navbar
-//const Navbar = () => {
-//    const [isOpen, setIsOpen
-
-//    const toggleMenu = () => {
-//      setIsOpen(!isOpen);
-//    };
-
-//      return (
-//          <nav className="navbar">
-//              <div className="logo">Aviation Payments</div>
-//              <div className="navbar-links ${isOpen ? 'open' : ''}">
-//                  <a href="#home">Home</a>
-//                  <a href="#services">Services</a>
-//                  <a href="#contact">Contact Us</a>
-//                  <a href="#about">About Us</a>
-//              </div>
-//              <div className="menu-icon" onClick={toggleMenu}>
-//                  <div className=""></div>
-//                  <div className=""></div>
-//                  <div className=""></div>
-//             </div>
-//         </nav>
-//      );
-//    };
-
-// revised ant design Navbar -LE
-// includes drawer but can delete if necessary -LE
-<<<<<<< HEAD
-
-
-export default Navbar;
-
-=======
->>>>>>> 7256c2a1a75f8b84a80883b559b45a5e235aabf4
