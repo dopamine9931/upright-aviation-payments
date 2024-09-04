@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "antd";
 
 
-const contentStyle = {
+const carouselStyle = {
   height: "160px",
   color: "#fff",
   lineHeight: "160px",
