@@ -94,8 +94,7 @@ export default Navbar;
 //      );
 //    };
 
-// revised ant design Navbar -LE
-// includes drawer but can delete if necessary -LE
+
 
 
 
