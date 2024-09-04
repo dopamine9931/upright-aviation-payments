@@ -1,7 +1,7 @@
 import React from "react";
-import "../components/component-css-files/infoSection.css";
+import "../components/component-css-files/CompInfo.css";
 
-const InfoSection = ({ subtitle, title, description }) => {
+const CompInfo = ({ subtitle, title, description }) => {
   return (
     <div className="info-section">
       <h4 className="info-subtitle">{subtitle}</h4>
@@ -11,4 +11,4 @@ const InfoSection = ({ subtitle, title, description }) => {
   );
 };
 
-export default InfoSection;
+export default CompInfo;

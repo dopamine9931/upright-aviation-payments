@@ -8,7 +8,7 @@ function MerchantServices() {
 
       <h2>Merchant Services</h2>
 
-    
+      <FormlessEmbed />
     </>
   );
 }
