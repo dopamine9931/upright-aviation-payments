@@ -15,6 +15,7 @@ import { ConfigProvider } from "antd";
 import AdminPage from "./pages/adminPage.jsx";
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
+import BlogPage from "./pages/blog.jsx";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
             colorPrimary: "#787878",
             colorBgContainer: "#141414",
             colorText: "#f3f3f3",
-            colorIcon: "#ffffff"
+            colorIcon: "#ffffff",
           },
         }}
       >
@@ -41,6 +42,7 @@ function App() {
             <Route path="/achsolutions" element={<ACHSolutions />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/admin" element={<AdminPage />} />
           </Routes>
         </Router>
