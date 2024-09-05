@@ -79,4 +79,3 @@ function AppMenu({ currentPath, mode }) {
 
 
 export default Navbar;
-
