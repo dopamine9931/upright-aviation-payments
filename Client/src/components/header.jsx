@@ -1,15 +1,39 @@
 import React from "react";
-import "../header.css";
-// Header
-function Header() {
-  return (
-    <>
-      <h1> Welcome Aviation Payments</h1>
-      <div className="header"></div>
-      <div className="header-font"></div>
-      
-    </>
-  );
-}
+import { Layout, Typography, Space } from "antd";
+// import "../header.css";
 
-export default Header;
+// new header component revised with ant design -LE
+
+const { Header } = Layout;
+const { Title } = Typography;
+
+const HeaderComponent = () => {
+  return (
+  <Header
+    style={{
+      position: "fixed",
+      top: 0,
+      zIndex: 1,
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between", // pushing the logo to the left and title to the right -LE
+      padding: "0 20px",
+      background: "#001529",
+    }}
+  >
+
+    <div className="logo" style={{ display: "flex", alignItems: "center" }}> 
+      <img src="/avipay_logo_no_text.png"
+          alt="Aviation Payments Logo" 
+          // dark neutral color scheme #fff -LE
+      style={{ height: "32px", marginRight: "20px", color: "#fff" }} /> 
+    </div>
+    <Title level={3} style={{ margin: 0, color: "#fff" }}> 
+    Aviation Payments
+    </Title>
+  </Header>
+  );
+};
+
+export default HeaderComponent;

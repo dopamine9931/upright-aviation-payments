@@ -1,15 +1,16 @@
 import React, { Routes, Route } from "react";
-
-import { Button } from "antd"; //add an import call on your components pulled from antd (in your component.jsx)
-//adding a button to test, delete in future version
-
+import GatewayFeatures from "../components/SolutionsGateway/GatewayFeatures";
+import FormlessEmbed from "../components/formlessai";
+import GatewayInfo from "../components/SolutionsGateway/GatewayInfo";
 
 function Gateway() {
 
   return (
     <div>
-      <h1> viation Payments </h1>
       <h2>Gateway Services</h2>
+    <GatewayInfo />
+    <GatewayFeatures />
+    <FormlessEmbed />
     </div>
   );
 };

@@ -17,6 +17,7 @@ import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 import BlogPage from "./pages/blog.jsx";
 
+
 function App() {
   return (
     <ApiKeyProvider>
@@ -30,7 +31,8 @@ function App() {
           },
         }}
       >
-        {/* <Navbar /> */}
+        <Navbar />
+
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />

@@ -7,8 +7,7 @@ function ACHSolutions() {
 
   return (
     <div>
-      <h1> Aviation Payments </h1>
-      <h2> ACH Solutions</h2>
+       <h2> ACH Solutions</h2>
     </div>
   );
 };
