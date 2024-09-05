@@ -15,3 +15,39 @@
 .custom-message .ant-message-custom-content {
   color: #f3f3f3 !important;
 }
+
+/* adding styles to the switch to try to get the green checkmark */
+/* adding the defaults to force it to stay that color */
+.ant-switch {
+  background-color: #5e5e5e; /* Default background color */
+  border-color: #5e5e5e; /* Default border color */
+}
+
+/* Styles for the checked state */
+.ant-switch-checked {
+  background-color: #5e5e5e; 
+  border-color: #5e5e5e; 
+}
+
+/* Style the switch circle */
+.ant-switch-inner {
+  position: relative;
+  line-height: 24px; /* Center checkmark vertically if needed */
+}
+
+/* Add checkmark inside the switch circle when checked */
+.ant-switch-checked .ant-switch-inner::after {
+  content: '✔'; 
+  font-size: 14px;
+  color: #52c41a; /* Green color for the checkmark */
+  position: absolute; /* Positioning for the checkmark */
+  right: 1px; /* pushed a pixel to center it within the circle */
+  top: 55%; /* Center vertically */
+  transform: translateY(-50%); /* Center the checkmark */
+  z-index: 1; /* Ensures the checkmark appears above other content */
+}
+
+/* Additional styling to ensure the checkmark is visible */
+.ant-switch-checked .ant-switch-inner {
+  color: #ffffff; 
+}

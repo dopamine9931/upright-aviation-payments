@@ -89,7 +89,7 @@ router.post("/login", apiKeyAuth, async (req, res) => {
 });
 
 // Route to delete a user by email
-router.delete("/delete", async (req, res) => {
+router.delete("/delete", apiKeyAuth, async (req, res) => {
   try {
     const { email } = req.body;
 
