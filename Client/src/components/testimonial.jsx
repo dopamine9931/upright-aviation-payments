@@ -1,5 +1,5 @@
 import React from "react";
-const Testimoanials = () => {
+const Testimonial = () => {
   return (
     <>
       <p>
@@ -8,9 +8,12 @@ const Testimoanials = () => {
         business. Their expertise and solutions have helped us streamline our
         payment processes and improve efficiency.
       </p>
-      <p><i>John Doe, Acme Inc.</i></p>
+      <p>
+        <i>John Doe, Acme Inc.</i>
+      </p>
     </>
   );
 };
 
-export default Testimoanials;
+export default Testimonial;
+

@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
 
-const testimonials = [
+const testimonial = [
   {
     quote: "This product has completely changed my life for the better!",
     author: "John Doe",
@@ -52,9 +52,9 @@ const positionStyle = {
   marginTop: "5px",
 };
 
-const TestimonialSlider = () => (
+const Testimonialslider = () => (
   <Carousel autoplay>
-    {testimonials.map((testimonial, index) => (
+    {testimonial.map((testimonial, index) => (
       <div key={index}>
         <div style={contentStyle}>
           <p style={quoteStyle}>"{testimonial.quote}"</p>
@@ -66,5 +66,5 @@ const TestimonialSlider = () => (
   </Carousel>
 );
 
-export default TestimonialSlider;
+export default Testimonialslider;
 

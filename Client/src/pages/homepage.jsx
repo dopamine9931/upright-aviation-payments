@@ -3,28 +3,18 @@ import InfoSection from "../components/infosection.jsx";
 import Solutions from "../components/solutions/solutioncards.jsx";
 import FormlessEmbed from "../components/formlessai";
 import Contactusmini from "../components/contactusmini";
-import Testimoanials from "../components/testimoanials";
+import Testimonial from "../components/testimonial.jsx";
 import TestimonialSlider from "../components/testimonialslider.jsx";
-
-
 
 function Homepage() {
   return (
-    
     <div className="landing-page">
-
-      <header className="header">
-          
-        Aviation Payments
-                
-      </header>
+      <header className="header">Aviation Payments</header>
 
       <main>
-        
         <InfoSection />
 
         <Solutions />
-
 
         <section id="about" className="about">
           <h2>About Us</h2>
@@ -38,14 +28,12 @@ function Homepage() {
         </section>
 
         <FormlessEmbed />
-        
-        <Testimoanials />
+
+        <Testimonial />
         <TestimonialSlider />
 
         <Contactusmini />
-
       </main>
-
     </div>
   );
 }

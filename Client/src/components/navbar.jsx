@@ -18,7 +18,6 @@ function Navbar({ currentPath = "" }) {
   };
 
   return (
-
     <div className="navbar-container">
       {/* Hamburger Button (Mobile view) */}
       <div onClick={showDrawer} className="hamburger-button">
@@ -34,11 +33,9 @@ function Navbar({ currentPath = "" }) {
       <Drawer
         placement="left"
         closable={false}
-
         onClose={closeDrawer}
         visible={drawerVisible}
         bodyStyle={{ padding: 0 }}
-
       >
         <AppMenu currentPath={currentPath} mode="vertical" />
       </Drawer>
@@ -77,5 +74,5 @@ function AppMenu({ currentPath, mode }) {
   );
 }
 
-
 export default Navbar;
+
