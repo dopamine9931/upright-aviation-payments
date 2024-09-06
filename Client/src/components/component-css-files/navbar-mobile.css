@@ -1,0 +1,67 @@
+/* Navbar styles */
+.navbar-container {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: black;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  z-index: 1000;
+  justify-content: space-between;
+}
+
+/* Hamburger button styles */
+.hamburger-button {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hide on desktop view by default */
+}
+
+/* Desktop menu styles */
+.menu-desktop {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Mobile drawer styles */
+.drawer-content {
+  background-color: black;
+  color: rgb(252, 251, 251);
+  padding: 0;
+  width: 250px; /* Adjust width as needed */
+}
+
+/* Media queries */
+
+/* Styles for mobile view */
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block; /* Show hamburger button on mobile view */
+  }
+
+  .menu-desktop {
+    display: none; /* Hide desktop menu on mobile view */
+  }
+}
+
+/* Styles for desktop view */
+@media (min-width: 769px) {
+  .hamburger-button {
+    display: none; /* Hide hamburger button on desktop view */
+  }
+
+  .menu-desktop {
+    display: flex; /* Show desktop menu on desktop view */
+  }
+}
+
+.ant-drawer-body {
+  transform: translateX(0px) !important;
+  background-color: black !important;
+}
+

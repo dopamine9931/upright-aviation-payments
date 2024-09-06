@@ -1,26 +1,32 @@
 import React from "react";
 import { Carousel } from "antd";
-const contentStyle = {
+
+
+const carouselStyle = {
   height: "160px",
   color: "#fff",
   lineHeight: "160px",
   textAlign: "center",
   background: "#364d79",
 };
-const Carousel = () => (
-  <Carousel autoplay>
-    <div>
-      <h3 style={contentStyle}>1</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>2</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>3</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>4</h3>
-    </div>
-  </Carousel>
-);
+const Carousel = () => {
+  return (
+    <Carousel autoplay>
+      <div>
+        <img src="/womanbywindow.jpg" alt="Woman by window" />
+      </div>
+      <div>
+        <img src="/propeller.jpg" alt="Propeller" />
+      </div>
+      <div>
+        <img src="/banwsideview.jpg" alt="Side view of a plane" />
+      </div>
+      <div>
+        <img src="/bandwfrontview.jpg" alt="Front view of a plane" />
+      </div>
+    </Carousel>
+  );
+};
+  
 export default Carousel;
+    
