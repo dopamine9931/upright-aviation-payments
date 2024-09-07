@@ -5,7 +5,7 @@ import FormlessEmbed from "../components/formlessai";
 import Contactusmini from "../components/contactusmini";
 import Testimoanials from "../components/testimoanials";
 import TestimonialSlider from "../components/testimonialslider.jsx";
-
+import CarouselHeader from "../components/carousel.jsx";
 
 
 function Homepage() {
@@ -20,7 +20,7 @@ function Homepage() {
       </header>
 
       <main>
-        
+        <CarouselHeader />
         <InfoSection />
 
         <Solutions />

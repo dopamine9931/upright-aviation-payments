@@ -24,7 +24,7 @@ const HeaderComponent = () => {
   >
 
     <div className="logo" style={{ display: "flex", alignItems: "center" }}> 
-      <img src="/avipay_logo_no_text.png"
+      <img src="/avipay_logo_no_text.jpg"
           alt="Aviation Payments Logo" 
           // dark neutral color scheme #fff -LE
       style={{ height: "32px", marginRight: "20px", color: "#fff" }} /> 

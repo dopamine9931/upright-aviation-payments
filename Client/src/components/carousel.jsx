@@ -9,7 +9,7 @@ const carouselStyle = {
   textAlign: "center",
   background: "#364d79",
 };
-const Carousel = () => {
+const CarouselHeader = () => {
   return (
     <Carousel autoplay>
       <div>
@@ -28,5 +28,5 @@ const Carousel = () => {
   );
 };
   
-export default Carousel;
+export default CarouselHeader;
     
