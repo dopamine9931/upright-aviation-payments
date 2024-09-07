@@ -14,6 +14,7 @@ const HOST = process.env.HOST || '127.0.0.1';
 const leadRoutes = require('./controllers/leadEndpoints');
 const apiKeyRoute = require('./controllers/apiKeyEndpoints')
 const adminRoutes = require('./controllers/adminEndpoints');
+const blogRoutes = require('./controllers/blogEndpoints')
 
 //limit requests 
 const apiLimiter = require('./middlewares/apiLimiter')
@@ -30,6 +31,7 @@ app.use(cors());
 //use routes
 app.use(leadRoutes, apiKeyRoute);
 app.use("/auth", adminRoutes);
+app.use("/blog", blogRoutes)
 
 //connect to db, if no errors then execute app.listen
 //this makes sure there are no issues with the db connection before starting the app to listen for incoming requests. 

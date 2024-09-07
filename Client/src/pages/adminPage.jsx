@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LoginForm from "../components/admin-components/loginForm";
-import UserCreateDelete from "../components/admin-components/userCreateDelete";
+import AdminPanel from "../components/admin-components/adminPanel";
 import DisplayLeads from "../components/admin-components/displayLeads";
 import MobileDisplayLeads from "../components/admin-components/mobileDisplayLeads"; // Import the mobile version
 
@@ -37,7 +37,7 @@ const AdminPage = () => {
       ) : (
         <>
           {isMobile ? <MobileDisplayLeads /> : <DisplayLeads />}
-          {isAdmin && <UserCreateDelete />}
+          {isAdmin && <AdminPanel />}
         </>
       )}
     </>
