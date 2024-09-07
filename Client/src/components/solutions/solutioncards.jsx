@@ -59,7 +59,7 @@ const Solutions = () => {
   };
 
   return (
-    <div style={{ padding: 80 }}>
+    <div style={{ padding: 30 }}>
       <Title level={1} style={{ textAlign: "center" }}>
         Our Solutions
       </Title>
