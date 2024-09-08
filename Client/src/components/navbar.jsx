@@ -70,7 +70,7 @@ function AppMenu({ currentPath, mode }) {
       <Menu.Item key="/aboutus">
         <a href="/aboutus">About Us / Contact</a>
       </Menu.Item>
-      <Menu.Item key="/solutions">
+      <Menu.Item key="/blog">
         <a href="/blog">Blog</a>
       </Menu.Item>
     </Menu>
