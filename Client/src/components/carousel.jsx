@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Carousel } from "antd";
+import { Carousel, Typography } from "antd";
 
 const { Title } = Typography; // For legibility -LE
 
@@ -28,7 +28,7 @@ const textStyle = {
   padding: "10px",
 };
 
-const Carousel = () => {
+const CarouselHeader = () => {
   return (
     <Carousel autoplay>
       <div>
@@ -38,7 +38,7 @@ const Carousel = () => {
         <img src="/propeller.jpg" alt="Propeller" style={imageStyle} />
       </div>
       <div>
-        <img src="/banwsideview.jpg" alt="Side view of a plane" style={imageStyle} />
+        <img src="/bandwsideview.jpg" alt="Side view of a plane" style={imageStyle} />
       </div>
       <div>
         <img src="/bandwfrontview.jpg" alt="Front view of a plane" style={imageStyle} />
@@ -47,4 +47,4 @@ const Carousel = () => {
   );
 };
   
-export default Carousel;
+export default CarouselHeader;
