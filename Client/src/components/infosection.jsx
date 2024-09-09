@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Typography } from "antd";
-// import "antd/dist/infosection.css";
+import "../components/component-css-files/infosection.css";
+
 const { Title } = Typography;
 
 const InfoSection = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/aboutus.jsx";
-import MerchantServices from "./components/merchantservices.jsx";
+import MerchantServices from "./pages/merchantservices.jsx";
 import Gateway from "./pages/gateway.jsx";
 import FuelCardSolutions from "./pages/fuelcard.jsx";
 import ATMSolutions from "./pages/atmsolutions.jsx";

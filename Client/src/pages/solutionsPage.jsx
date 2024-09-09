@@ -1,5 +1,5 @@
 import React, { Routes, Route } from "react";
-import MerchantServices from "../components/merchantservices.jsx";
+import MerchantServices from "../pages/merchantservices.jsx";
 import Gateway from "../pages/gateway.jsx";
 import Consulting from "../pages/consulting.jsx";
 import OtherSolutions from "../components/othersolutions.jsx";
