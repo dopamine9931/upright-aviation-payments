@@ -14,7 +14,7 @@ const LoginForm = ({ onTokenUpdate, onAdminStatusUpdate }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": `${apiKey}`,
+          "x-api-key": apiKey,
         },
         body: JSON.stringify(values),
       });

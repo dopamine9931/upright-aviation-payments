@@ -8,7 +8,9 @@ import TestimonialSlider from "../components/testimonialslider.jsx";
 function Homepage() {
   return (
     <div className="landing-page">
+
       <header className="header">Aviation Payments</header>
+
 
       <main>
         <InfoSection />
