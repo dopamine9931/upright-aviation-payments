@@ -59,3 +59,7 @@
     display: flex; /* Show desktop menu on desktop view */
   }
 }
+.ant-drawer-body {
+    transform: translateX(0px) !important;
+    background-color: black !important;
+  }
