@@ -2,7 +2,7 @@
 import React from "react";
 import { Carousel } from "antd";
 
-const { Title } = Typography;
+const { Title } = Typography; // For legibility -LE
 
 const carouselStyle = {
   width: "15%", 
@@ -19,7 +19,7 @@ const carouselStyle = {
 const imageStyle = {
   width: "100%",
   height: "200px", // Adjust height as needed -LE
-  objectFit: "cover", //Keep images from stretching -LE
+  objectFit: "cover", // Keep images from stretching -LE
 }
 
 const textStyle = {
