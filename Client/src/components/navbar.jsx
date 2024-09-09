@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import "../components/component-css-files/navbar-mobile.css"; // Adjust the path as needed
-
+import { Link } from "react-router-dom";
 // Navbar component
 function Navbar({ currentPath = "" }) {
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -65,7 +65,7 @@ function AppMenu({ currentPath, mode }) {
         <a href="/">Home</a>
       </Menu.Item>
       <Menu.Item key="/solutions">
-        <a href="/solutions">Solutions</a>
+        <Link to="/#solutions">Solutions</Link>
       </Menu.Item>
       <Menu.Item key="/aboutus">
         <a href="/aboutus">About Us / Contact</a>

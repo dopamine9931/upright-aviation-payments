@@ -1,4 +1,4 @@
-import React, { Routes, Route } from "react";
+import React, { useEffect } from "react";
 import InfoSection from "../components/infosection.jsx";
 import Solutions from "../components/solutions/solutioncards.jsx";
 import FormlessEmbed from "../components/formlessai";
@@ -9,6 +9,15 @@ import CarouselHeader from "../components/carousel.jsx";
 
 
 function Homepage() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
   return (
     
     <div className="landing-page">
@@ -23,8 +32,9 @@ function Homepage() {
         <CarouselHeader />
         <InfoSection />
 
-        <Solutions />
-
+        <section id="solutions">
+          <Solutions />
+        </section>
 
         <section id="about" className="about">
           <h2>About Us</h2>
