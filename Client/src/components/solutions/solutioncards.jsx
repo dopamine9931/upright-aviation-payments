@@ -10,42 +10,42 @@ const cardData = [
     title: "Consulting",
     description: "Software & ERP",
     imageUrl: "../consulting.jpg",
-    link: "/consulting",
+    link: "/solutionsPage",
   },
   {
     id: 2,
     title: "Merchant Services",
     description: "POS and Payments",
     imageUrl: "merchantservices.jpg",
-    link: "/merchantservices",
+    link: "/solutionsPage",
   },
   {
     id: 3,
     title: "Gateway Connectivity",
     description: "Description for card 3",
     imageUrl: "connectivity.jpeg",
-    link: "/gateway",
+    link: "/solutionsPage",
   },
   {
     id: 4,
     title: "Fuel Card Solutions",
     description: "Description for card 4",
     imageUrl: "fuelcard.jpg",
-    link: "/fuelcard",
+    link: "/solutionsPage",
   },
   {
     id: 5,
     title: "ATM Solutions",
     description: "Description for card 5",
     imageUrl: "atmsolutions.jpg",
-    link: "/atmsolutions",
+    link: "/solutionsPage",
   },
   {
     id: 6,
     title: "ACH Solutions",
     description: "Description for card 6",
     imageUrl: "banking.jpg",
-    link: "/achsolutions",
+    link: "/solutionsPage",
   },
 ];
 
@@ -59,7 +59,7 @@ const Solutions = () => {
   };
 
   return (
-    <div style={{ padding: 80 }}>
+    <div style={{ padding: 30 }}>
       <Title level={1} style={{ textAlign: "center" }}>
         Our Solutions
       </Title>

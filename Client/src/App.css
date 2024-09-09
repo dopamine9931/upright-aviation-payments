@@ -41,7 +41,6 @@
   color: #8a8989;
 }
 
-
 /* Global variables */
 
 :root {
@@ -52,7 +51,7 @@
   --color-tertiary: #1e1e1e;
   --color-button: #4a4a4a;
   --color-button-hover: #666666;
-  --font-family: 'Arial', sans-serif;
+  --font-family: "Arial", sans-serif;
 }
 
 /* returning here to complete -le */
@@ -71,15 +70,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-padding: 20px ;
-color: black ;
-background-color: white; 
-position: fixed; /* navbar is in fixed position when you scroll */
-top: 0; /* set at the very top of page */
-width: 100%; /* navbar takes up the full width of the page */
-z-index: 1000; /* set on top of the other elements */
+  padding: 20px;
+  color: black;
+  background-color: white;
+  position: fixed; /* navbar is in fixed position when you scroll */
+  top: 0; /* set at the very top of page */
+  width: 100%; /* navbar takes up the full width of the page */
+  z-index: 1000; /* set on top of the other elements */
 }
-
 
 .navbar .logo {
   color: rgb(51, 53, 56);
@@ -94,7 +92,7 @@ z-index: 1000; /* set on top of the other elements */
 
 .navbar-links a {
   color: rgb(20, 21, 22);
-  text-decoration: none; 
+  text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   background-color: rgb(0, 0, 0);
@@ -185,4 +183,3 @@ z-index: 1000; /* set on top of the other elements */
     display: flex;
   }
 }
-
