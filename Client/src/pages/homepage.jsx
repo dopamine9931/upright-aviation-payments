@@ -13,7 +13,7 @@ function Homepage() {
     
     <div className="landing-page">
 
-      <header className="header">
+      <header >
           
         Aviation Payments
                 

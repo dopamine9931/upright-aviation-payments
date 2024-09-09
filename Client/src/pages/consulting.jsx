@@ -1,16 +1,30 @@
 import React, { Routes, Route } from "react";
-import { Button } from "antd"; //add an import call on your components pulled from antd (in your component.jsx)
-//adding a button to test, delete in future version
+import { Card } from 'antd';
+import "../components/component-css-files/imageoverlay.css"; // CSS file
 
+const { Meta } = Card;
 
 function Consulting() {
-
   return (
     <div>
-      <h1> Aviation Payments </h1>
       <h2> Consulting</h2>
+
+      <div className="image-overlay-container">
+        <Card
+          cover={<img alt="hangar" src="/hangar.jpg" />}
+          style={{ width: 640, position: "relative"}}
+          
+        >
+          <div className="overlay-text">
+            <Meta
+              title="We're here to guide you at every step ."
+              description="Our world class team of expert consultants will work with you to meet your needs. Whether its your first time or your looking to expand. We've got you covered."
+            />
+          </div>
+        </Card>
+      </div>
     </div>
   );
-};
+}
 
 export default Consulting;
