@@ -18,7 +18,7 @@ const carouselStyle = {
 
 const imageStyle = {
   width: "100%",
-  height: "200px", // Adjust height as needed -LE
+  height: "400px", // Adjust height as needed -LE
   objectFit: "cover", // Keep images from stretching -LE
 }
 

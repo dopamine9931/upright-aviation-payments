@@ -8,7 +8,7 @@ import "../component-css-files/messageTheme.css";
 const DisplayBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize] = useState(5); // Number of cards per page
+  const [pageSize] = useState(4); // Number of cards per page
   const apiKey = useContext(ApiKeyContext);
 
 useEffect(() => {
