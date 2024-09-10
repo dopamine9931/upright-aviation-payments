@@ -91,7 +91,7 @@ body {
 }
 
 .navbar-links a {
-  color: rgb(20, 21, 22);
+  color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -126,7 +126,7 @@ body {
 
 .header h1 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -148,6 +148,26 @@ body {
   font-size: 3em;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logo-container .logo {
+  height: 50px;
+
+}
+/* inverts logo colors */
+/* .logo {
+  filter: invert(1) brightness(1000%);
+} */
+/* Add the spin effect when hovered */
+.logo-container:hover .logo {
+  animation: spin 1s linear;
+}
 /* Footer styles (to be deleted) 
 .footer {
   background-color: darkgray;
