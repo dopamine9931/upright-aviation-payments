@@ -12,12 +12,13 @@ function Consulting() {
       <div className="image-overlay-container">
         <Card
           cover={<img alt="hangar" src="/hangar.jpg" />}
-          style={{ width: 640, position: "relative"}}
+          style={{ width: 900, height: 500, position: "relative"}}
           
         >
           <div className="overlay-text">
             <Meta
               title="We're here to guide you at every step ."
+              style={{ fontSize: 18 }}
               description="Our world class team of expert consultants will work with you to meet your needs. Whether its your first time or your looking to expand. We've got you covered."
             />
           </div>
