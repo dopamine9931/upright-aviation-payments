@@ -141,11 +141,10 @@ body {
 }
 
 .anticon:hover {
-  color: rgb(22, 22, 22); /* Change icon to gray on hover */
+  color: rgb(134, 134, 134); /* Change icon to gray on hover */
 }
 
-.anticon-bulb {
-  /* Product features icon size */
+.anticon {/* Product features icon size */
   font-size: 3em;
 }
 
