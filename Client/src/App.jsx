@@ -16,6 +16,7 @@ import AdminPage from "./pages/adminPage.jsx";
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 import BlogPage from "./pages/blog.jsx";
+import LegalInfo from "./pages/legalInfo.jsx";
 
 function App() {
   return (
@@ -30,9 +31,8 @@ function App() {
           },
         }}
       >
-        <Navbar />
-
         <Router>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/solutionsPage" element={<OurSolutions />} />
@@ -45,6 +45,7 @@ function App() {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/admin" element={<AdminPage />} />
+            <Route path="/legal" element={<LegalInfo />} />
           </Routes>
         </Router>
         <Footer />
