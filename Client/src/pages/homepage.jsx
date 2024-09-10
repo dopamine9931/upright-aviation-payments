@@ -19,17 +19,14 @@ function Homepage() {
   return (
     <div className="landing-page">
 
-      <header className="header">Aviation Payments</header>
-
-
       <main>
+        <CarouselHeader />
 
         <InfoSection />
 
         <Solutions />
 
-        <section id="about" className="about"></section>
-
+        
         <FormlessEmbed />
 
         <TestimonialSlider />

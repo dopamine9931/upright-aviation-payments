@@ -11,12 +11,12 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+/* .logo:hover {
   filter: drop-shadow(0 0 2em #f6f6f7);
-}
-.logo.react:hover {
+} */
+/* .logo.react:hover {
   filter: drop-shadow(0 0 2em #f5f4f4);
-}
+} */
 
 @keyframes logo-spin {
   from {
