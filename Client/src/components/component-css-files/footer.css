@@ -1,7 +1,7 @@
 .footer-logo {
   width: 100px; 
   height: auto;
-  margin: 10 auto;
+  margin: 20 auto;
 }
 
 
@@ -19,7 +19,7 @@
 
 .footer-nav a {
   text-decoration: none;
-  color: #9e9c9c;
+  color: white;
   margin: 0 10px;
 }
 
@@ -48,5 +48,9 @@
 
 .footer-bottom-nav a {
   text-decoration: none;
-  color: #9e9c9c;
+  color: white;
+}
+
+.footer-nav:hover {
+  color: lightgray
 }

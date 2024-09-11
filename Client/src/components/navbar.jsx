@@ -18,8 +18,17 @@ function Navbar({ currentPath = "" }) {
   };
 
   return (
-
     <div className="navbar-container">
+      {/* Logo on the left */}
+      <div className="logo-container">
+        <a href="/">
+          <img
+            src="/avipay_logo_no_text.jpg"
+            alt="Company Logo"
+            className="logo"
+          />
+        </a>
+      </div>
       {/* Hamburger Button (Mobile view) */}
       <div onClick={showDrawer} className="hamburger-button">
         <MenuOutlined />
@@ -34,11 +43,9 @@ function Navbar({ currentPath = "" }) {
       <Drawer
         placement="left"
         closable={false}
-
         onClose={closeDrawer}
         visible={drawerVisible}
         bodyStyle={{ padding: 0 }}
-
       >
         <AppMenu currentPath={currentPath} mode="vertical" />
       </Drawer>

@@ -7,18 +7,10 @@ import TestimonialSlider from "../components/testimonialslider.jsx";
 import CarouselHeader from "../components/carousel.jsx";
 
 function Homepage() {
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.getElementById(hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, []);
+
   return (
     <div className="landing-page">
-      <main>
+      <main style={{ paddingTop: "20px" }}>
         <CarouselHeader />
 
         <InfoSection />

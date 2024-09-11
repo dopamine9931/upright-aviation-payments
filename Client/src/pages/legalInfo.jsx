@@ -1,6 +1,10 @@
 import React from "react";
 import { Layout, Menu, Typography, Anchor } from "antd";
 import '../components/component-css-files/legalinfo.css'
+import CookiePolicy from "../components/legal/cookie";
+import LegalPolicy from "../components/legal/legalpolicy";
+import PrivPolicy from "../components/legal/privpolicy";
+
 
 const { Content } = Layout;
 const { Title, Paragraph } = Typography;
@@ -24,36 +28,30 @@ const LegalInfo = () => {
           className="site-layout-content"
           style={{ maxWidth: "800px", margin: "0 auto" }}
         >
-          <Title level={1} style={{ textAlign: "center" }}>
+          <Title level={0} style={{ textAlign: "center" }}>
             Legal Information
           </Title>
+          <div className="title-underline"></div>
+        </div>
 
-
-          {/* Legal Info Section */}
+        {/* Legal Info Section */}
+        <div>
           <section id="legal-info" style={{ marginBottom: "40px" }}>
-            <Title level={2}>Legal Info</Title>
-            <Paragraph>
-              This section contains the legal information of the company,
-              including disclaimers, terms of service, and other legal notices.
-            </Paragraph>
+            <LegalPolicy />
           </section>
-
-          {/* Privacy Policy Section */}
+          <div className="title-underline"></div>
+        </div>
+        {/* Privacy Policy Section */}
+        <div>
           <section id="privacy-policy" style={{ marginBottom: "40px" }}>
-            <Title level={2}>Privacy Policy</Title>
-            <Paragraph>
-              Our Privacy Policy explains how we handle your personal data, your
-              privacy rights, and how the law protects you.
-            </Paragraph>
+            <PrivPolicy />
           </section>
-
+          <div className="title-underline"></div>
+        </div>
+        <div>
           {/* Cookie Policy Section */}
           <section id="cookie-policy" style={{ marginBottom: "40px" }}>
-            <Title level={2}>Cookie Policy</Title>
-            <Paragraph>
-              Our Cookie Policy provides information about how we use cookies to
-              improve your experience on our site.
-            </Paragraph>
+            <CookiePolicy />
           </section>
         </div>
       </Content>
