@@ -18,7 +18,6 @@ function Homepage() {
   }, []);
   return (
     <div className="landing-page">
-
       <main>
         <CarouselHeader />
 
@@ -26,7 +25,6 @@ function Homepage() {
 
         <Solutions />
 
-        
         <FormlessEmbed />
 
         <TestimonialSlider />
@@ -38,4 +36,3 @@ function Homepage() {
 }
 
 export default Homepage;
-
