@@ -23,10 +23,10 @@ const Footer = () => {
           <img src={logo} alt="Company Logo" className="footer-logo" />
         </div>
         <nav className="footer-nav">
-          <a href="/aboutus">About Us</a>
+          <a href="/aboutus">About Us / Contact</a>
           <a href="/solutionsPage">Solutions</a>
-          <a href="/contact">Contact Us</a>
-          <a href="/faq">FAQ</a>
+          {/* <a href="/contact">Contact Us</a>
+          <a href="/faq">FAQ</a> */}
           <a href="/blog">Blog</a>
         </nav>
       </div>
@@ -34,9 +34,10 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; 2024 Aviation Payments. All rights reserved.</p>
         <nav className="footer-bottom-nav">
-          <a href="/legal/#privacy-policy">Privacy Policy</a>
+          <a href="/legal/">Terms and Conditions</a>
+          {/* <a href="/legal/#privacy-policy">Privacy Policy</a>
           <a href="/legal/#legal-info">Terms and Conditions</a>
-          <a href="/legal/#cookie-policy">Cookie Policy</a>
+          <a href="/legal/#cookie-policy">Cookie Policy</a> */}
         </nav>
       </div>
     </footer>
