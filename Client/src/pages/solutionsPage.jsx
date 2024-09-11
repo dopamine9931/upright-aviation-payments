@@ -23,14 +23,19 @@ return (
       direction="vertical"
       size="large"
       style={{ display: "flex", background: "#000000" }}>
-      <Consulting />
-      <MerchantServices />
+        <Consulting />
+        
+        <MerchantServices />
+        
       <OtherSolutions />
-      <Gateway />
-    </Space>
-  </Content>
-</Layout>
-);
+        <Gateway />
+        
+      </Space>
+      
+    </Content>
+    
+  </Layout>
+  );
 }
 
 

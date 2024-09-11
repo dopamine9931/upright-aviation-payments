@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import "../components/component-css-files/navbar-mobile.css"; // Adjust the path as needed
-
+import { Link } from "react-router-dom";
 // Navbar component
 function Navbar({ currentPath = "" }) {
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -18,8 +18,17 @@ function Navbar({ currentPath = "" }) {
   };
 
   return (
-
     <div className="navbar-container">
+      {/* Logo on the left */}
+      <div className="logo-container">
+        <a href="/">
+          <img
+            src="/avipay_logo_no_text.jpg"
+            alt="Company Logo"
+            className="logo"
+          />
+        </a>
+      </div>
       {/* Hamburger Button (Mobile view) */}
       <div onClick={showDrawer} className="hamburger-button">
         <MenuOutlined />
@@ -34,11 +43,9 @@ function Navbar({ currentPath = "" }) {
       <Drawer
         placement="left"
         closable={false}
-
         onClose={closeDrawer}
         visible={drawerVisible}
         bodyStyle={{ padding: 0 }}
-
       >
         <AppMenu currentPath={currentPath} mode="vertical" />
       </Drawer>
@@ -67,11 +74,8 @@ function AppMenu({ currentPath, mode }) {
       <Menu.Item key="/solutions">
         <a href="/solutionsPage">Solutions</a>
       </Menu.Item>
-      <Menu.Item key="/contactus">
-        <a href="/contactus">Contact Us</a>
-      </Menu.Item>
       <Menu.Item key="/aboutus">
-        <a href="/aboutus">About Us</a>
+        <a href="/aboutus">About Us / Contact</a>
       </Menu.Item>
       <Menu.Item key="/blog">
         <a href="/blog">Blog</a>

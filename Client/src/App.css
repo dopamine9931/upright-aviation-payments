@@ -11,12 +11,12 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+/* .logo:hover {
   filter: drop-shadow(0 0 2em #f6f6f7);
-}
-.logo.react:hover {
+} */
+/* .logo.react:hover {
   filter: drop-shadow(0 0 2em #f5f4f4);
-}
+} */
 
 @keyframes logo-spin {
   from {
@@ -91,7 +91,7 @@ body {
 }
 
 .navbar-links a {
-  color: rgb(20, 21, 22);
+  color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -126,7 +126,7 @@ body {
 
 .header h1 {
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -141,14 +141,33 @@ body {
 }
 
 .anticon:hover {
-  color: rgb(22, 22, 22); /* Change icon to gray on hover */
+  color: rgb(134, 134, 134); /* Change icon to gray on hover */
 }
 
-.anticon-bulb {
-  /* Product features icon size */
+.anticon {/* Product features icon size */
   font-size: 3em;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logo-container .logo {
+  height: 50px;
+
+}
+/* inverts logo colors */
+/* .logo {
+  filter: invert(1) brightness(1000%);
+} */
+/* Add the spin effect when hovered */
+.logo-container:hover .logo {
+  animation: spin 1s linear;
+}
 /* Footer styles (to be deleted) 
 .footer {
   background-color: darkgray;

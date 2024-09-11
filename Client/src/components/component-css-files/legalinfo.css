@@ -1,0 +1,94 @@
+/* .legal-info-page {
+  background-color: black; 
+}
+
+.site-layout-content {
+  background: black;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} */
+
+h1, h2 {
+  color: rgb(250, 250, 250); /* Customize text color */
+}
+/* General Layout */
+.legal-info-page {
+  background-color: black; /* Light background for contrast */
+}
+
+.site-layout-content {
+  padding: 20px;
+  background-color: black; /* Background for each section */
+  border-radius: 8px; /* Slight rounding for a modern look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Section Spacing */
+.site-layout-content section {
+  margin-bottom: 50px; /* Ensures each section is spaced out */
+}
+
+/* Title and Header */
+.site-layout-content h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.site-layout-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .site-layout-content {
+    padding: 15px;
+  }
+
+  /* Adjust section spacing for mobile */
+  .site-layout-content section {
+    margin-bottom: 30px;
+  }
+}
+
+/* Style the title to be larger */
+.legal-info-title {
+  font-size: 72px; /* Increase the size of the title */
+  font-weight: bold; /* Make it bold */
+  text-align: center;
+  margin-bottom: 10px; /* Space between the title and the bar */
+}
+
+/* Create a white underline below the title */
+.title-underline {
+  width: 80%; /* Make the white bar span 80% of the container width */
+  height: 4px; /* Set the thickness of the bar */
+  background-color: white; /* Set the color to white */
+  margin: 0 auto; /* Center the bar */
+  margin-bottom: 40px; /* Space between the bar and the next section */
+  border-radius: 2px; /* Slightly round the corners */
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+  .legal-info-title {
+    font-size: 36px; /* Adjust the title size for smaller screens */
+  }
+}
+
+/* Target all images within the Legal Info page and reduce size by 10% */
+.legal-info-page img {
+  width: 80%; /* Reduce the width by 10% */
+  height: auto; /* Keep the height proportional */
+  display: block;
+  margin: 0 auto; /* Ensure images are centered */
+}
+
+/* Optional: Add some padding or margins around images if needed */
+.legal-info-page img {
+  margin-bottom: 20px; /* Adds space below the image */
+}
+
