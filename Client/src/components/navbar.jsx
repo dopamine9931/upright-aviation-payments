@@ -23,7 +23,7 @@ function Navbar({ currentPath = "" }) {
       <div className="logo-container">
         <a href="/">
           <img
-            src="/avipay_logo_no_text.jpg"
+            src="/avipay_logo_nobackground.png"
             alt="Company Logo"
             className="logo"
           />
