@@ -181,7 +181,9 @@ body {
     font-size: 0.9rem;
     }
 */
-
+.ant-layout{
+ background-color: black;
+}
 /* Responsive design */
 @media (max-width: 768px) {
   .navbar-links {
