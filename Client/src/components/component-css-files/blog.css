@@ -1,0 +1,33 @@
+.custom-popover {
+  background-color: #141414 !important; /* Matches your theme's background color */
+  color: #f3f3f3 !important; /* Matches your theme's text color */
+  border-radius: 8px; /* Adds some rounded corners */
+}
+
+.custom-popover .ant-popover-arrow {
+  background-color: #141414 !important;
+}
+
+.custom-popover .ant-popover-title {
+  background-color: #141414 !important;
+  color: #f3f3f3 !important;
+  border-bottom: 1px solid #787878 !important;
+  text-align: center;
+}
+
+/* Custom Popover Content */
+.custom-popover .ant-popover-inner-content {
+  color: #f3f3f3 !important; /* Ensures text is readable */
+  text-align: center; /* Centers the content text */
+}
+
+.custom-popover .ant-popover-inner {
+  background-color: #141414 !important;
+  border-radius: 8px; /* Ensures rounded corners */
+}
+
+.custom-popover .ant-popover-inner-content p {
+  margin: 0;
+  padding: 10px;
+  line-height: 1.5;
+}

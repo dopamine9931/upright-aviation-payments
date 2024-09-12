@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Table, Spin, Button, Typography } from "antd";
+import { Table, Spin, Button, Typography, Switch, message } from "antd";
 import { API_LEAD_Display } from "../../constants/endpoints";
 import { ApiKeyContext } from "../../context/apiKeyContext";
+import "../component-css-files/messageTheme.css";
+
 const { Title } = Typography;
 
 const DisplayLeads = () => {
@@ -35,6 +37,37 @@ const DisplayLeads = () => {
     }
   };
 
+  const updateContactedStatus = async (email, newStatus) => {
+    try {
+      const response = await fetch(`${API_LEAD_Display}/updateLead`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": `${apiKey}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify({ email, contacted: newStatus }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to update status");
+      }
+
+      const updatedLead = await response.json();
+      message.success({
+        content: `Lead ${updatedLead.Lead.firstName} ${updatedLead.Lead.lastName} updated successfully`,
+        className: "custom-message",
+      });
+      fetchLeads(); // Refresh leads after updating
+    } catch (err) {
+      message.error({
+        content: err.message,
+        className: "custom-message",
+      });
+    }
+  };
+
   useEffect(() => {
     fetchLeads();
   }, []);
@@ -44,7 +77,11 @@ const DisplayLeads = () => {
   }
 
   if (error) {
-    return <p style={{ color: "red" }}>Error retrieving leads: {error}</p>;
+    message.error({
+      content: `Error retrieving leads: ${error}`,
+      className: "custom-message",
+    });
+    return null;
   }
 
   if (leads.length === 0) {
@@ -64,7 +101,16 @@ const DisplayLeads = () => {
       title: "Contacted",
       dataIndex: "contacted",
       key: "contacted",
-      render: (contacted) => (contacted ? "Yes" : "No"),
+      render: (contacted, record) => (
+        <Switch
+          checked={contacted}
+          onChange={(checked) => updateContactedStatus(record.email, checked)}
+          style={{
+            backgroundColor: "#787878", // Or any color slightly lighter than #141414
+            borderColor: "#787878", // To match the primary color
+          }}
+        />
+      ),
     },
   ];
 

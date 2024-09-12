@@ -1,11 +1,12 @@
 import React from "react";
 import { Row, Col, Typography } from "antd";
-// import "antd/dist/infosection.css";
+import "../components/component-css-files/infosection.css";
+
 const { Title } = Typography;
 
 const InfoSection = () => {
   return (
-    <Row align="middle" style={{ height: "70vh", margin: 0 }}>
+    <Row align="middle" style={{ height: "50vh", margin: 0 }}>
       <Col span={12} style={{ textAlign: "left", padding: "0 20px" }}>
         <Title level={1} style={{ textAlign: "center" }}>
           Welcome to Aviation Payments - Simplifying Transactions
