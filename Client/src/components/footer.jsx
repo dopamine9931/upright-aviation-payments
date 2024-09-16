@@ -11,7 +11,7 @@
 
 
 import React from "react";
-import logo from "/avipay_logo_no_text.jpg";
+import logo from "/avipay_logo_nobackground.png";
 import "./component-css-files/footer.css"; 
 
 
