@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Card, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 const { Title } = Typography;
@@ -50,6 +50,9 @@ const cardData = [
 ];
 
 const Solutions = () => {
+  // Initialize state for window width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   // Initialize the navigation hook
   const navigate = useNavigate();
 
@@ -58,25 +61,45 @@ const Solutions = () => {
     navigate(link);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div style={{ padding: 30 }}>
-      <Title level={1} style={{ textAlign: "center" }}>
+    <div style={{ padding: 20 }}>
+      <Title
+        level={1}
+        style={{
+          textAlign: "center",
+          marginBottom: 40,
+          fontSize: windowWidth < 576 ? "24px" : "32px",
+        }}
+      >
         Our Solutions
       </Title>
       <Row gutter={16}>
         {cardData.map(({ id, title, description, imageUrl, link }) => (
           <Col
-            span={8}
+            xs={24}
+            sm={12}
+            md={8}
+            lg={8}
+            xl={8}
             key={id}
             style={{
               marginBottom: 24,
-              display: "flex",
-              justifyContent: "center",
             }}
           >
             <Card
               hoverable
-              style={{ width: 240 }}
+              style={{ width: "100%", width: 240 }}
               cover={<img alt={title} src={imageUrl} />}
               onClick={() => handleCardClick(link)}
             >
