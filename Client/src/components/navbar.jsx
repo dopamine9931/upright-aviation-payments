@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import "../components/component-css-files/navbar-mobile.css"; // Adjust the path as needed
@@ -6,12 +6,28 @@ import { Link } from "react-router-dom";
 // Navbar component
 function Navbar({ currentPath = "" }) {
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 750) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+        setDrawerVisible(false); // Close the drawer if returning to desktop
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   // Function to show the drawer
   const showDrawer = () => {
     setDrawerVisible(true);
   };
-
+  
   // Function to close the drawer
   const closeDrawer = () => {
     setDrawerVisible(false);
@@ -21,24 +37,24 @@ function Navbar({ currentPath = "" }) {
     <div className="navbar-container">
       {/* Logo on the left */}
       <div className="logo-container">
-        <a href="/">
-          <img
-            src="/avipay_logo_nobackground.png"
-            alt="Company Logo"
-            className="logo"
-          />
-        </a>
+        <img
+          src="/avipay_logo_nobackground.png"
+          alt="Company Logo"
+          className="logo"
+        />
       </div>
       {/* Hamburger Button (Mobile view) */}
-      <div onClick={showDrawer} className="hamburger-button">
-        <MenuOutlined />
-      </div>
-
+      {isMobile && (
+        <div onClick={showDrawer} className="hamburger-button">
+          <MenuOutlined />
+        </div>
+      )}
       {/* Centered Menu Items (Desktop view) */}
-      <div className="menu-desktop">
-        <AppMenu currentPath={currentPath} mode="horizontal" />
-      </div>
-
+      {!isMobile && (
+        <div className="menu-desktop">
+          <AppMenu currentPath={currentPath} mode="horizontal" />
+        </div>
+      )}
       {/* Drawer Component */}
       <Drawer
         placement="left"
