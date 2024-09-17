@@ -1,0 +1,40 @@
+.solutioncards {
+  text-align: center;
+  position: center;
+  justify-content: center;
+  
+}
+.solutioncards-card {
+  position: center;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.solutioncards-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* DO NOT USE - GLOBAL CLASS NAME */
+/* .ant-row { */
+  /* margin: 0; */
+  /* justify-content: center;
+  display: flex; */
+  /* margin-left: auto !important;
+  margin-right: auto !important; */
+
+  /*Ensure no default margins from Ant Design */
+/*}  */ 
+
+.ant-col {
+  padding: 0 10px;
+
+  /* Add horizontal padding between columns */
+}
+
+.ant-card {
+  margin-bottom: 18px; /* Add vertical margin between cards */
+}
+
