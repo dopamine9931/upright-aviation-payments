@@ -17,7 +17,8 @@
   margin-bottom: 40px;
 }
 
-.ant-row {
+/* DO NOT USE - GLOBAL CLASS NAME */
+/* .ant-row { */
   /* margin: 0; */
   /* justify-content: center;
   display: flex; */
@@ -25,7 +26,7 @@
   margin-right: auto !important; */
 
   /*Ensure no default margins from Ant Design */
-}
+/*}  */ 
 
 .ant-col {
   padding: 0 10px;
