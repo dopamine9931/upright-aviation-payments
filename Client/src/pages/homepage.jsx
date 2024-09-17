@@ -9,6 +9,7 @@ import CarouselHeader from "../components/carousel.jsx";
 function Homepage() {
 
   return (
+    
     <div className="landing-page">
       <main style={{ paddingTop: "20px" }}>
         <CarouselHeader />
@@ -22,7 +23,9 @@ function Homepage() {
         <TestimonialSlider />
 
         <Contactusmini />
+
       </main>
+
     </div>
   );
 }
