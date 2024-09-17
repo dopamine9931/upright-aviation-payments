@@ -27,7 +27,8 @@ return (
         
         <MerchantServices />
         
-      <OtherSolutions />
+        <OtherSolutions />
+        
         <Gateway />
         
       </Space>

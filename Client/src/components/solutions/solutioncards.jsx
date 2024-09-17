@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Card, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
+import "../component-css-files/solutioncards.css";
 const { Title } = Typography;
 const { Meta } = Card;
 
@@ -73,33 +74,17 @@ const Solutions = () => {
   }, []);
 
   return (
-    <div style={{ padding: 20 }}>
-      <Title
-        level={1}
-        style={{
-          textAlign: "center",
-          marginBottom: 40,
-          fontSize: windowWidth < 576 ? "24px" : "32px",
-        }}
-      >
+    <div class="solutioncards">
+      <Title level={1} className="solutioncards-title">
         Our Solutions
       </Title>
       <Row gutter={16}>
         {cardData.map(({ id, title, description, imageUrl, link }) => (
-          <Col
-            xs={24}
-            sm={12}
-            md={8}
-            lg={8}
-            xl={8}
-            key={id}
-            style={{
-              marginBottom: 24,
-            }}
-          >
+          <Col xs={24} sm={12} md={8} lg={8} xl={8} key={id}>
             <Card
               hoverable
-              style={{ width: "100%", width: 240 }}
+              className="solutioncards-card"
+              style={{ width: "100%", maxWidth: 240 }}
               cover={<img alt={title} src={imageUrl} />}
               onClick={() => handleCardClick(link)}
             >

@@ -1,4 +1,42 @@
 .ant-card-hoverable:hover {
-  filter: drop-shadow(0 0 2em #f6f6f7);
+  filter: drop-shadow(0 0 1em #f6f6f7);
 }
 
+/* infosection.css */
+
+.infosection {
+  display: flex;
+  margin: 20px
+}
+
+.infosection-row {
+  height: 50vh;
+  margin: 0;
+}
+
+.infosection-col-left {
+  text-align: left;
+  padding: 0 20px;
+  
+}
+
+.infosection-title {
+  text-align: center;
+}
+
+.infosection-text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.infosection-col-right {
+  text-align: right;
+  padding: 0 20px;
+  
+}
+
+.infosection-img {
+  max-width: 100%;
+  height: auto;
+  
+}
