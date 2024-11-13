@@ -10,30 +10,24 @@ const InfoSection = () => {
   return (
     <div className="infosection">
       <Row align="middle" className="infosection-row">
-        <Col span={12} className="infosection-col-left">
-          <Title level={1} className="infosection-title">
+        <Col xs={24} md={12} className="infosection-col-left">
+          <Title level={1}>
             Welcome to Aviation Payments - Simplifying Transactions
           </Title>
-          <p className="infosection-text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Perspiciatis totam accusamus error vel labore libero deserunt ipsa.
-            Molestias aliquid ratione voluptatum illo est porro delectus fuga
-            quibusdam quo hic officiis magni totam, laudantium odio rem labore
-            velit laborum atque iure pariatur minus magnam vitae quidem sint? Id
-            maxime rerum sint.
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            pariatur eligendi quod, autem harum ut, dolorem similique
+            perspiciatis aut nemo eos, ab tempora suscipit dignissimos!
           </p>
           <div className="lead-capture-homecontainer">
-            <LeadCapture isModal={true} 
-             /> {" "}
+            <LeadCapture isModal={true} />{" "}
           </div>
         </Col>
 
-        <Col span={12} className="infosection-col-right">
-          <img
-            src="/aviation_small.jpg"
-            alt="Description"
-            className="infosection-img"
-          />
+        <Col xs={24} md={12} className="infosection-col-right">
+          <div className="infosection-img">
+            <img src="/aviation_small.jpg" alt="Description" />
+          </div>
         </Col>
       </Row>
     </div>

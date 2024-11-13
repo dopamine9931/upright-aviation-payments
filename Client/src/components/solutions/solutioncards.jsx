@@ -75,10 +75,16 @@ const Solutions = () => {
 
   return (
     <div class="solutioncards">
-      <Title level={1} className="solutioncards-title">
+      <Title
+        level={1}
+        style={{
+          textDecoration: "underline",
+        }}
+        className="solutioncards-title"
+      >
         Our Solutions
       </Title>
-      <Row gutter={16}>
+      <Row gutter={[16, 16]}>
         {cardData.map(({ id, title, description, imageUrl, link }) => (
           <Col xs={24} sm={12} md={8} lg={8} xl={8} key={id}>
             <Card
