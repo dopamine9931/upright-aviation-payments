@@ -1,0 +1,67 @@
+.merchantservices{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+
+.merchantservicestitle{
+  text-decoration: underline;
+}
+
+
+.merchantservicescontainer {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.merchantservices-row {
+  flex-wrap: wrap;
+  display: flex;
+  
+}
+
+.merchantservices-col-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  padding: 0 20px;
+  
+}
+
+.pStyle{
+  font-size: 18px;
+  line-height: 1.5px;
+}
+
+.merchantservices-col-right {
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  
+}
+
+.merchantservices-img img {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .merchantservices {
+    /* padding: 16px; */
+    
+  }
+}

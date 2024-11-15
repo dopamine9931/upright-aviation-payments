@@ -1,28 +1,41 @@
-.image-overlay-container {
+.consulting-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
   height: 100%; /* Adjust width as needed */
-  margin:0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .overlay-text {
+  display: flex;
   position: absolute;
   top: 50%;
-  right: 0;
   font-style: bold;
   transform: translateY(0 -50%);
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   color: white;
   padding: 10px;
   border-radius: 10px;
-  
+  text-align: center;
 }
 
-.ant-card-cover img {
-  width: 100%;
-  height: 85%;
-  
+.hangar-img img {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .consulting-container,
+  .overlay-text {
+    padding: 16px;
+    display: flex;
+    position: relative;
+  }
 }

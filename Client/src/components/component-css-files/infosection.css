@@ -3,40 +3,42 @@
 }
 
 /* infosection.css */
-
 .infosection {
   display: flex;
-  margin: 20px
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 30px;
+  width: 100%; /* Add semicolon */
+  margin-bottom: 24px;
 }
 
 .infosection-row {
-  height: 50vh;
   margin: 0;
+  height: auto; /* Make it responsive */
 }
 
-.infosection-col-left {
-  text-align: left;
-  padding: 0 20px;
-  
-}
-
-.infosection-title {
-  text-align: center;
-}
-
-.infosection-text {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
+.infosection-col-left,
 .infosection-col-right {
-  text-align: right;
   padding: 0 20px;
-  
 }
 
 .infosection-img {
   max-width: 100%;
   height: auto;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .infosection {
+    width: 70%;
+    height: auto;
+    /* padding: 16px; */
+    
+  }
 }
